@@ -1,0 +1,97 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+  "padding": {
+     "left": 1
+   },
+},
+    "display": {
+    "separator": " ➤ ",
+},
+"modules": [
+    {
+    "type": "title",
+    "key": "󰍹 NAME:",
+    "keyColor": "38;5;214"
+    },
+    {
+    "type": "custom",
+    "format": " ────────────── ARCH ──────────────── "
+    },
+    {
+    "type": "os",
+    "key": " DISTRO",
+    "keyColor": "yellow"
+    },
+    {
+    "type": "kernel",
+    "key": "│ ├",
+    "keyColor": "yellow"
+    },
+    {
+    "type": "packages",
+    "key": "│ ├󰏖",
+    "keyColor": "yellow"
+    },
+    {
+    "type": "shell",
+    "key": "│ ├",
+    "keyColor": "yellow"
+    },
+    {
+    "type": "wm",
+    "key": "│ └",
+    "keyColor": "yellow"
+    },
+    {
+    "type": "host",
+    "key": "󰌢 SYSTEM",
+    "keyColor": "red"
+    },
+    {
+    "type": "cpu",
+    "key": "│ ├󰻠",
+    "keyColor": "red"
+    },
+    {
+    "type": "gpu",
+    "key": "│ ├󰻑",
+    "format": "{2}",
+    "keyColor": "red"
+    },
+    {
+    "type": "disk",
+    "key": "│ ├󰋊",
+    "keyColor": "red",
+    "compactType": "original-with-refresh-rate"
+    },
+    {
+    "type": "memory",
+    "key": "│ ├󰾆",
+    "keyColor": "red"
+    },
+    {
+    "type": "swap",
+    "key": "│ ├󰓡",
+    "keyColor": "red"
+    },
+    {
+    "type": "uptime",
+    "key": "│ ├󰅐",
+    "keyColor": "red"
+    },
+    {
+    "type": "battery",
+    "key": "│ └",
+    "keyColor": "red"
+    },
+    {
+    "type": "custom",
+    "format": " ───────────────────────────────────── "
+    },
+    {
+    "type": "custom",
+    "format": "\u001b[31m  \u001b[33m  \u001b[34m  \u001b[35m  \u001b[36m  \u001b[37m  \u001b[36m  \u001b[35m  \u001b[34m  \u001b[33m  \u001b[31m "
+    },
+    ]
+}
