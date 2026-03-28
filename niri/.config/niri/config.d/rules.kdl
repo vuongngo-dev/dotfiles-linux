@@ -1,0 +1,95 @@
+// ================================================
+//   _   ____  ______  _  _______  _  ___________ 
+//  | | / / / / / __ \/ |/ / ___/ / |/ / ___/ __ \
+//  | |/ / /_/ / /_/ /    / (_ / /    / (_ / /_/ /
+//  |___/\____/\____/_/|_/\___/ /_/|_/\___/\____/ 
+// ================================================
+
+//=====================================
+// WINDOW RULES
+//=====================================
+// https://niri-wm.github.io/niri/Configuration%3A-Window-Rules.html
+
+window-rule {
+    geometry-corner-radius 0
+    clip-to-geometry true
+    match is-active=false
+    opacity 0.9
+}
+
+window-rule {
+    match title="^Open File"
+    match title="^Select a File"
+    match title="^Choose wallpaper"
+    match title="^Open Folder"
+    match title="^Save As"
+    match title="^Library"
+    match title="^File Upload"
+    match title="wants to save$"
+    match title="wants to open$"
+    
+    open-floating true
+    default-column-width { proportion 0.6; }
+    default-window-height { proportion 0.6; }
+}
+
+window-rule {
+    match app-id="pavucontrol"
+    match app-id="org.pulseaudio.pavucontrol"
+    match app-id="nm-connection-editor"
+    match app-id="blueman-manager"
+    match app-id="wdisplays"
+    match app-id="nwg-look"
+    
+    open-floating true
+    default-column-width { proportion 0.6; }
+    default-window-height { proportion 0.6; }
+}
+
+window-rule {
+    match app-id="polkit-gnome-authentication-agent-1"
+    
+    open-floating true
+    block-out-from "screen-capture"
+}
+
+window-rule {
+    match app-id="^jetbrains-.*"
+}
+
+window-rule {
+    match app-id="^steam_app_"
+    match title=".exe$"
+    
+    // Niri's equivalent to Hyprland's 'immediate'
+    variable-refresh-rate true
+}
+
+window-rule {
+    match app-id="snapshot"
+    open-floating true
+}
+
+//=====================================
+// LAYER RULES
+//=====================================
+// https://niri-wm.github.io/niri/Configuration%3A-Layer-Rules.html
+
+layer-rule {
+    match namespace="waybar"
+    match at-startup=true
+    block-out-from "screencast"
+    shadow { off; }
+    place-within-backdrop true
+}
+
+layer-rule {
+    match namespace="^wallpaper$"
+    place-within-backdrop true
+}
+
+// Make fuzzel FLOAT.
+layer-rule {
+    match namespace="^launcher$"
+    baba-is-float true
+}

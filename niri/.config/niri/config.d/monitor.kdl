@@ -1,0 +1,42 @@
+// ================================================
+//   _   ____  ______  _  _______  _  ___________ 
+//  | | / / / / / __ \/ |/ / ___/ / |/ / ___/ __ \
+//  | |/ / /_/ / /_/ /    / (_ / /    / (_ / /_/ /
+//  |___/\____/\____/_/|_/\___/ /_/|_/\___/\____/ 
+// ================================================
+
+//=====================================
+// OUTPUT CONFIGURATION
+//=====================================
+// https://niri-wm.github.io/niri/Configuration%3A-Outputs.html
+
+output "eDP-1" {
+    mode "1920x1200@60.003"
+    scale 1.0
+    variable-refresh-rate on-demand=true
+    transform "normal"
+    position x=0 y=0
+}
+
+output "HDMI-A-1" {
+    mode "1920x1080@60.000"
+    scale 1.0
+    transform "270"
+    position x=0 y=-1080
+    variable-refresh-rate on-demand=true
+}
+
+output "DP-1" {
+    mode "1920x1080@60.000"
+    scale 1.0
+    transform "normal"
+    variable-refresh-rate on-demand=true
+}
+
+output "DP-2" {
+    mode "1920x1080@60.000"
+    scale 1.0
+    transform "normal"
+    variable-refresh-rate on-demand=true
+}
+

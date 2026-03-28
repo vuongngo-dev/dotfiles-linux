@@ -1,0 +1,82 @@
+// ================================================
+//   _   ____  ______  _  _______  _  ___________ 
+//  | | / / / / / __ \/ |/ / ___/ / |/ / ___/ __ \
+//  | |/ / /_/ / /_/ /    / (_ / /    / (_ / /_/ /
+//  |___/\____/\____/_/|_/\___/ /_/|_/\___/\____/ 
+// ================================================
+
+//=====================================
+// Layout
+//=====================================
+// https://niri-wm.github.io/niri/Configuration%3A-Layout.html
+
+layout {
+    gaps 8
+    center-focused-column "never"
+    background-color "transparent"
+    
+    // default windows
+    preset-column-widths {
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66667
+        proportion 1.0 // Monitor configuration.
+    }
+    preset-window-heights {
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66667
+        proportion 1.0
+    }
+    default-column-width {
+        proportion 0.5;
+    }
+
+    // appearence
+    
+    // off all effects
+    focus-ring { off; }
+    shadow { off; }
+
+    border { 
+        on
+        width 2
+        active-color "#ffffff"
+        inactive-color "#2c2c2c"
+        urgent-color "#9b0000"  
+    }
+
+
+    insert-hint {
+        on
+        color "#63626196"
+    }
+    struts {
+        left 0
+        right 0
+        top 0
+        bottom 0
+    }
+}
+
+// windows tab style
+// https://niri-wm.github.io/niri/Configuration%3A-Recent-Windows.html
+recent-windows {
+    debounce-ms 300
+    open-delay-ms 50
+
+    highlight {
+        active-color "#d8dadd3d"
+        padding 5
+    }
+
+    previews {
+        max-height 500
+        max-scale 0.5
+    }
+
+    binds {
+        Alt+Tab { next-window; }
+        Alt+Shift+Tab { previous-window; }
+    }
+} 
