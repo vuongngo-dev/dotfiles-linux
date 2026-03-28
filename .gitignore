@@ -1,0 +1,10 @@
+# Large font files
+fonts/*.zip
+fonts/*.tar.*
+fonts/*.7z
+
+# General ignores
+*.bak
+*~
+.DS_Store
+secrets/

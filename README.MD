@@ -4,7 +4,7 @@
 
 Focused on a clean, productive, and reliable daily driver using **Niri** (primary) and **Hyprland** (secondary) on Arch Linux.
 
-![Niri Screenshot](screenshots/niri.png)
+![Niri Screenshot](preview/niri.png)
 ![Hyprland Screenshot](screenshots/hyprland.png)
 
 ## ✨ Highlights
@@ -22,13 +22,13 @@ This repository demonstrates my ability to manage complex configurations as code
 - **Window Manager**:
   - Primary: [Niri](https://github.com/niri-wm/niri) — Scrollable tiling Wayland compositor
   - Secondary: [Hyprland](https://hyprland.org/)
-- **Status Bar**: Waybar
-- **Launcher**: Fuzzel
-- **Notifications**: Mako
-- **Terminal**: Alacritty / Kitty
-- **Shell**: Zsh / Bash
-- **Editor**: Neovim
-- **Other**: Starship, Git, Docker-ready environment
+- **Status Bar**: waybar
+- **Launcher**: rofi-laucher
+- **Notifications**: swaync
+- **Terminal**: foot / kitty
+- **Shell**: zsh / bash
+- **Editor**: neovim/vim
+- **Other**: bira(themes zsh), Git, Docker-ready environment
 
 ## 📁 Repository Structure
 
