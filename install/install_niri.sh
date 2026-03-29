@@ -26,6 +26,7 @@ NIRI_PACKAGES=(
     "qt5-wayland" "qt6-wayland"   # Native Wayland support for Qt apps
 
     # --- File Manager ---
+    "gvfs" "gvfs-mtp" # Trash support, network mounting, and mobile devices
 
     # --- Desktop Environment & UI Components ---
     "waybar"                      # Status bar
