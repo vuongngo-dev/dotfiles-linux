@@ -13,9 +13,9 @@
 output "eDP-1" {
     mode "1920x1200@60.003"
     scale 1.0
-    variable-refresh-rate on-demand=true
     transform "normal"
     position x=0 y=0
+    variable-refresh-rate on-demand=true
 }
 
 output "HDMI-A-1" {

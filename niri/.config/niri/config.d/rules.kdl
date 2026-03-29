@@ -13,8 +13,6 @@
 window-rule {
     geometry-corner-radius 0
     clip-to-geometry true
-    match is-active=false
-    opacity 0.9
 }
 
 window-rule {
@@ -27,7 +25,10 @@ window-rule {
     match title="^File Upload"
     match title="wants to save$"
     match title="wants to open$"
-    
+    match title=r#".*(Dialog|Properties|Preferences|Settings|Rename).*"#
+    match title=r#".*(Open|Save|Select).*"#
+    match title=r#".*Sign in - Google Accounts — Mozilla Firefox"#
+
     open-floating true
     default-column-width { proportion 0.6; }
     default-window-height { proportion 0.6; }
@@ -40,21 +41,21 @@ window-rule {
     match app-id="blueman-manager"
     match app-id="wdisplays"
     match app-id="nwg-look"
-    
+    match app-id=r#"org\.gtk\.FileChooserDialog"#
+    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+
     open-floating true
     default-column-width { proportion 0.6; }
     default-window-height { proportion 0.6; }
 }
 
 window-rule {
-    match app-id="polkit-gnome-authentication-agent-1"
-    
-    open-floating true
-    block-out-from "screen-capture"
+    match app-id="^jetbrains-.*"
 }
 
 window-rule {
-    match app-id="^jetbrains-.*"
+    match app-id=r#"steam"# title=r#".*(Friends|Settings|Properties).*"#
+    open-floating true
 }
 
 window-rule {
@@ -78,7 +79,6 @@ window-rule {
 layer-rule {
     match namespace="waybar"
     match at-startup=true
-    block-out-from "screencast"
     shadow { off; }
     place-within-backdrop true
 }

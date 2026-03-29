@@ -11,6 +11,15 @@
 // https://niri-wm.github.io/niri/Configuration%3A-Miscellaneous.html
 
 environment {
+    // --- XDG DESKTOP INTEGRATION ---
+    // Critical for Screen Sharing & Portal functionality
+    XDG_CURRENT_DESKTOP "niri"
+    XDG_SESSION_TYPE "wayland"
+    XDG_SESSION_DESKTOP "niri"
+
+    // Fix for Electron apps (Discord, VS Code, Obsidian)
+    ELECTRON_OZONE_PLATFORM_HINT "auto"
+
     // --- TOOLKIT BACKENDS ---
     // Force applications to use Wayland natively
     QT_QPA_PLATFORM "wayland;xcb"
@@ -18,27 +27,11 @@ environment {
     CLUTTER_BACKEND "wayland"
     SDL_VIDEODRIVER "wayland"
 
-    // Fix for Electron apps (Discord, VS Code, Obsidian)
-    ELECTRON_OZONE_PLATFORM_HINT "wayland"
-
-    // --- XDG DESKTOP INTEGRATION ---
-    // Critical for Screen Sharing & Portal functionality
-    XDG_CURRENT_DESKTOP "GNOME"
-    XDG_SESSION_TYPE "wayland"
-    XDG_SESSION_DESKTOP "GNOME"
-
     // --- NVIDIA SPECIFIC (GTX 1650) ---
     // Essential for hardware acceleration on NVIDIA laptops
     LIBVA_DRIVER_NAME "nvidia"
     GBM_BACKEND "nvidia-drm"
     __GLX_VENDOR_LIBRARY_NAME "nvidia"
-    
-    // Improves stability on NVIDIA + Wayland
-    __GL_GSYNC_ALLOWED "1"
-    __GL_VRR_ALLOWED "1"
-    
-    // Fix for potential flickering on some Acer Nitro panels
-    WLR_NO_HARDWARE_CURSORS "1"
 
     // --- JAVA & MISC ---
     // Essential for your Java studies (Fixes blank window issues in Wayland)

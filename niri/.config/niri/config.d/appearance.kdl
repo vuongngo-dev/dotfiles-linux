@@ -37,20 +37,15 @@ layout {
     // off all effects
     focus-ring { off; }
     shadow { off; }
+    insert-hint { off; }
 
     border { 
         on
         width 2
         active-color "#ffffff"
         inactive-color "#2c2c2c"
-        urgent-color "#9b0000"  
     }
-
-
-    insert-hint {
-        on
-        color "#63626196"
-    }
+    
     struts {
         left 0
         right 0

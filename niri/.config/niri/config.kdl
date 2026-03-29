@@ -28,12 +28,4 @@ include "config.d/autostart.kdl" // Daemons and startup applications
 //=====================================
 screenshot-path "~/Pictures/Screenshots/%Y-%m-%d %H-%M-%S.png"
 
-prefer-no-csd
-hotkey-overlay {
-    skip-at-startup
-}
-gestures {
-    hot-corners {
-        off
-    }
-}
+gestures { hot-corners { off; }; }

@@ -34,6 +34,5 @@ input {
 
 cursor {
     xcursor-size 20
-    hide-when-typing
-    hide-after-inactive-ms 1000
+    hide-after-inactive-ms 5000
 }
