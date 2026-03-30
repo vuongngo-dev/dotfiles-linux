@@ -1,12 +1,35 @@
 #!/usr/bin/env bash
 
-# ==============================================================================
-# TERMINAL COLOR CODES
-# ==============================================================================
+# --- COLOR DEFINITIONS ---
 GREEN='\033[0;32m'
 BLUE='\033[0;34m'
 YELLOW='\033[1;33m'
-NC='\033[0m' # No Color
+LAVENDER='\033[0;35m'
+NC='\033[0m'
+
+# --- DISPLAY LOGO ---
+show_logo() {
+    clear
+    echo -e "${LAVENDER}"
+    cat << "EOF"
+  ================================================
+    _   ____  ______  _  _______  _  ___________ 
+   | | / / / / / __ \/ |/ / ___/ / |/ / ___/ __ \
+   | |/ / /_/ / /_/ /    / (_ / /    / (_ / /_/ /
+   |___/\____/\____/_/|_/\___/ /_/|_/\___/\____/ 
+  ================================================
+EOF
+    echo -e "${NC}"
+    echo -e "${BLUE}>>> Starting System Installation ...${NC}"
+    echo "------------------------------------------------"
+}
+
+# Call the function
+show_logo
+
+# ==============================================================================
+# TERMINAL COLOR CODES
+# ==============================================================================
 
 echo -e "${BLUE}====================================================${NC}"
 echo -e "${GREEN}    GNOME-HYPRLAND SYSTEM ENGINEER TOOLKIT        ${NC}"
@@ -34,7 +57,7 @@ ESSENTIAL_TOOLS=(
   "decibels"             # Minimalist music player (Replaces Elisa)
   "gnome-sound-recorder" # GNOME audio recorder (Replaces KRecorder)
   "showtime"             # Best video player for Hyprland
-  "snapshot"		     # Camera
+  "snapshot"		         # Camera
 
 
   # 4. Desktop UI & Theme Engine
