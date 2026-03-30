@@ -35,17 +35,17 @@ layout {
     // appearence
     
     // off all effects
-    focus-ring { off; }
     shadow { off; }
     insert-hint { off; }
-
-    border { 
+    border { off; }
+    
+    focus-ring {
         on
         width 2
         active-color "#ffffff"
         inactive-color "#2c2c2c"
     }
-    
+
     struts {
         left 0
         right 0
@@ -54,11 +54,13 @@ layout {
     }
 }
 
-// windows tab style
+//=====================================
+// WINDOW TAB STYLE
+//=====================================
 // https://niri-wm.github.io/niri/Configuration%3A-Recent-Windows.html
 recent-windows {
     debounce-ms 300
-    open-delay-ms 50
+    open-delay-ms 150
 
     highlight {
         active-color "#d8dadd3d"
@@ -75,3 +77,94 @@ recent-windows {
         Alt+Shift+Tab { previous-window; }
     }
 } 
+
+//=====================================
+// WINDOW RULES
+//=====================================
+// https://niri-wm.github.io/niri/Configuration%3A-Window-Rules.html
+
+window-rule {
+    geometry-corner-radius 5
+    clip-to-geometry true
+    shadow { off; }
+}
+
+
+window-rule {
+    match title="^Open File"
+    match title="^Select a File"
+    match title="^Choose wallpaper"
+    match title="^Open Folder"
+    match title="^Save As"
+    match title="^Library"
+    match title="^File Upload"
+    match title="wants to save$"
+    match title="wants to open$"
+    match title=r#".*(Dialog|Properties|Preferences|Settings|Rename).*"#
+    match title=r#".*(Open|Save|Select).*"#
+    match title=r#".*Sign in - Google Accounts — Mozilla Firefox"#
+
+    open-floating true
+    default-column-width { proportion 0.6; }
+    default-window-height { proportion 0.6; }
+}
+
+window-rule {
+    match app-id="pavucontrol"
+    match app-id="org.pulseaudio.pavucontrol"
+    match app-id="nm-connection-editor"
+    match app-id="blueman-manager"
+    match app-id="wdisplays"
+    match app-id="nwg-look"
+    match app-id=r#"org\.gtk\.FileChooserDialog"#
+    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+
+    open-floating true
+    default-column-width { proportion 0.6; }
+    default-window-height { proportion 0.6; }
+}
+
+window-rule {
+    match app-id="foot"
+    default-window-height { proportion 1.0; }
+}
+
+window-rule {
+    match app-id="^jetbrains-.*"
+}
+
+window-rule {
+    match app-id=r#"steam"# title=r#".*(Friends|Settings|Properties).*"#
+    open-floating true
+}
+
+window-rule {
+    match app-id="^steam_app_"
+    match title=".exe$"
+    
+    // Niri's equivalent to Hyprland's 'immediate'
+    variable-refresh-rate true
+}
+
+//=====================================
+// LAYER RULES
+//=====================================
+// https://niri-wm.github.io/niri/Configuration%3A-Layer-Rules.html
+
+layer-rule {
+    match namespace="waybar"
+    match at-startup=true
+    shadow { off; }
+    place-within-backdrop true
+}
+
+layer-rule {
+    match namespace="^wallpaper$"
+    place-within-backdrop true
+}
+
+// Make fuzzel FLOAT.
+layer-rule {
+    match namespace="^launcher$"
+    shadow { off; }
+}

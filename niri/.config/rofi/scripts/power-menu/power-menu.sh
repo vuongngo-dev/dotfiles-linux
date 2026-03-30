@@ -1,5 +1,12 @@
 #!/usr/bin/env bash
 
+# ============================================================
+# Script: Rofi Power Menu
+# Platform: Arch Linux x Niri (Wayland)
+# Function: Provides a power menu with options to Lock, Logout, Suspend, Reboot,
+#           and Shutdown, using Rofi for the interface and systemctl for actions.
+# ============================================================
+
 # Define options with Nerd Font icons
 lock="  Lock"
 logout="  Logout"

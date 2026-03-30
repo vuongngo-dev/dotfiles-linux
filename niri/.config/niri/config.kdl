@@ -19,13 +19,13 @@ include "config.d/keybinds.kdl" // Keybindings for system and application contro
 include "config.d/appearance.kdl" // Visual styling
 include "config.d/animations.kdl" // Optimized physics-based animations
 
-include "config.d/rules.kdl" // Specific application handling
-
 include "config.d/autostart.kdl" // Daemons and startup applications
 
 //=====================================
 // GLOBAL SETTINGS
 //=====================================
+prefer-no-csd
 screenshot-path "~/Pictures/Screenshots/%Y-%m-%d %H-%M-%S.png"
 
+hotkey-overlay { skip-at-startup; }
 gestures { hot-corners { off; }; }

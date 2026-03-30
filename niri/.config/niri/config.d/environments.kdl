@@ -33,7 +33,19 @@ environment {
     GBM_BACKEND "nvidia-drm"
     __GLX_VENDOR_LIBRARY_NAME "nvidia"
 
+    // --- FCITX 5 ---
+    GTK_IM_MODULE "fcitx"
+    QT_IM_MODULE "fcitx"
+    XMODIFIERS "@im=fcitx"
+    SDL_IM_MODULE "fcitx"
+    GLFW_IM_MODULE "fcitx"
+    DefaultIMModule "fcitx"
+
     // --- JAVA & MISC ---
     // Essential for your Java studies (Fixes blank window issues in Wayland)
     _JAVA_AWT_WM_NONREPARENTING "1"
+    
+    // --- SET THEMES ---
+    
 }
+    

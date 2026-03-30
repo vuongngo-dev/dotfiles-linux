@@ -1,5 +1,12 @@
 #!/usr/bin/env bash
 
+# ============================================================
+# Script: Rofi Wallpaper Picker
+# Platform: Arch Linux x Niri (Wayland)
+# Function: Provides a Rofi-based interface to select and apply wallpapers from a specified directory,
+#           with support for image previews and notifications.
+# ============================================================
+
 set -euo pipefail
 
 # --- Configuration ---

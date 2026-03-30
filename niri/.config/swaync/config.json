@@ -2,7 +2,7 @@
   "$schema": "/etc/swaync/config.schema.json",
   "positionX": "right",
   "positionY": "top",
-  "control-center-width": 320,
+  "control-center-width": 300,
   "control-center-margin-top": 20,
   "control-center-margin-right": 20,
   "control-center-margin-bottom": 50,
@@ -25,16 +25,16 @@
   ],
   "widget-config": {
     "title": {
-      "text": "Control Center",
+      "text": "NOTIFICATIONS",
       "clear-all-button": true,
-      "button-text": "󰎟 Clear All"
+      "button-text": "󰎟 Clear"
     },
     "dnd": {
       "text": "Do Not Disturb"
     },
     "mpris": {
-      "image-size": 50,
-      "image-radius": 11
+      "image-size": 40,
+      "image-radius": 5
     },
     "volume": {
       "label": "󰕾",
@@ -58,21 +58,21 @@
           "type": "toggle",
           "command": "bash ~/.config/niri/scripts/airplane_mode.sh",
           "update-command": "sh -c 'nmcli radio wifi | grep -q \"disabled\" && echo true || echo false'",
-          "interval": 1
+          "interval": 10
         },
         {
           "label": "󰛨 ",
           "type": "toggle",
           "command": "bash -c '~/.config/niri/scripts/night_light.sh'",
           "update-command": "pgrep -x wlsunset > /dev/null && echo true || echo false",
-          "interval": 1
+          "interval": 10
         },
         {
           "label": "󰌪",
           "type": "toggle",
           "command": "bash -c '~/.config/niri/scripts/power_saved.sh'",
           "update-command": "powerprofilesctl get | grep -q power-saver && echo true || echo false",
-          "interval": 1
+          "interval": 10
         }
       ]
     },
@@ -86,21 +86,21 @@
             "type": "toggle",
             "command": "~/.config/niri/scripts/power_mode.sh performance",
             "update-command": "powerprofilesctl get | grep -q performance && echo true || echo false",
-            "interval": 1
+            "interval": 10
           },
           {
             "label": "󰾆  Balanced",
             "type": "toggle",
             "command": "~/.config/niri/scripts/power_mode.sh balanced",
             "update-command": "powerprofilesctl get | grep -q balanced && echo true || echo false",
-            "interval": 1
+            "interval": 10
           },
           {
             "label": "󰌪  Power Saver",
             "type": "toggle",
             "command": "~/.config/niri/scripts/power_mode.sh power-saver",
             "update-command": "powerprofilesctl get | grep -q power-saver && echo true || echo false",
-          "interval": 1
+          "interval": 10
           }
         ]
       }

@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# ============================================================
+# Script: Volume Control with Notifications
+# Platform: Arch Linux x Niri (Wayland)
+# Function: Adjust system volume and microphone mute status, then send a notification with the current level/status.
+# ============================================================
+
 case "$1" in
     up)
         wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+

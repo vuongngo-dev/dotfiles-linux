@@ -18,12 +18,7 @@ if [ ! -f "$FLAG" ]; then
     # 2. Dim screen to 20% (Optimized for indoor study)
     brightnessctl set 20%
 
-    # 3. Disable Niri animations to reduce GPU/CPU overhead
-    # In Niri, setting slowdown to 0 or a very high number effectively stops them
-    # But the official way is to 'set-column-width' to instant or use the msg action:
-    niri msg action set-slowdown 10.0 # Extreme slowdown makes it feel instant/static
-
-    # 4. Notify the user (Critical = stays on screen until acknowledged)
+    # 3. Notify the user (Critical = stays on screen until acknowledged)
     notify-send -h string:x-dunst-stack-tag:power_save \
                 -u critical \
                 -i battery-caution-symbolic \
@@ -35,13 +30,10 @@ else
     # 1. Restore CPU to performance (For SQL/Java workloads)
     powerprofilesctl set performance
 
-    # 2. Restore screen brightness to 85%
-    brightnessctl set 85%
+    # 2. Restore screen brightness to 90%
+    brightnessctl set 90%
 
-    # 3. Restore Niri animations to normal speed
-    niri msg action set-slowdown 1.0
-
-    # 4. Notify the user
+    # 3. Notify the user
     notify-send -h string:x-dunst-stack-tag:power_save \
                 -u normal \
                 -i battery-full-symbolic \

@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# ============================================================
+# Script: Brightness Control with Notifications
+# Platform: Arch Linux x Niri (Wayland)
+# Function: Adjust screen brightness and send a notification with the current level.
+# ============================================================
+
 # Execute brightness change
 if [[ "$1" == "up" ]]; then
     brightnessctl -e4 -n2 set 5%+

@@ -28,11 +28,10 @@ input {
     mouse {
         accel-profile "flat"
     }
-
     focus-follows-mouse
 }
 
 cursor {
-    xcursor-size 20
+    xcursor-size 16
     hide-after-inactive-ms 5000
 }
