@@ -4,31 +4,55 @@
 
 Focused on a clean, productive, and reliable daily driver using **Niri** (primary) and **Hyprland** (secondary) on Arch Linux.
 
-![Niri Screenshot](preview/niri.png)
-![Hyprland Screenshot](screenshots/hyprland.png)
+## 🖼️ Previews
 
-## ✨ Highlights
+### Niri (Primary Window Manager)
 
-- **Modular structure**: Separate folders for common configs, Niri, and Hyprland
-- **Reproducible setup**: One-command installation using GNU Stow
-- **Minimal & performant**: Optimized for Wayland, tiling workflow, and system administration tasks
+<div align="center">
+  <img src="niri/preview/preview00.png" alt="Niri Desktop Preview" width="800" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <p><em>Scrollable tiling Wayland compositor with clean interface</em></p>
+</div>
+
+### Hyprland (Secondary Window Manager)
+
+<div align="center">
+  <img src="hyprland/preview/preview_01.png" alt="Hyprland Desktop Preview" width="800" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <p><em>Feature-rich Wayland compositor with dynamic tiling</em></p>
+</div>
+
+## ✨ Highlights & Key Features
+
+- **Modular structure**: Separate folders for common configs, Niri, and Hyprland — easy to maintain and extend
+- **Reproducible setup**: One-command installation using GNU Stow — ensures consistent environment across machines
+- **Minimal & performant**: Optimized for Wayland, tiling workflow, and system administration tasks — low resource usage
 - **System Engineer mindset**: Clean organization, version-controlled configs, and automation-ready (scripts, backup, switch WM)
+- **Wayland-native**: Full Wayland support with modern protocols for better performance and security
+- **Tiling workflow**: Efficient window management for productivity and multitasking
+- **Customizable**: Extensive configuration options for personalization
 
 This repository demonstrates my ability to manage complex configurations as code — a core skill for Infrastructure as Code (IaC), automation, and reliable system design.
 
 ## 🛠️ Tech Stack
 
+[![Arch Linux](https://img.shields.io/badge/Arch_Linux-1793D1?style=for-the-badge&logo=arch-linux&logoColor=white)](https://archlinux.org/)
+[![Niri](https://img.shields.io/badge/Niri-Scroll_Tiling-FF6B6B?style=for-the-badge)](https://github.com/niri-wm/niri)
+[![Hyprland](https://img.shields.io/badge/Hyprland-Wayland-00ADD8?style=for-the-badge)](https://hyprland.org/)
+[![Waybar](https://img.shields.io/badge/Waybar-Status_Bar-4CAF50?style=for-the-badge)](https://github.com/Alexays/Waybar)
+[![Rofi](https://img.shields.io/badge/Rofi-Launcher-9C27B0?style=for-the-badge)](https://github.com/davatorium/rofi)
+[![Foot](https://img.shields.io/badge/Foot-Terminal-FF9800?style=for-the-badge)](https://codeberg.org/dnkl/foot)
+[![Neovim](https://img.shields.io/badge/Neovim-Editor-57A143?style=for-the-badge&logo=neovim&logoColor=white)](https://neovim.io/)
+
 - **OS**: Arch Linux (rolling release)
 - **Window Manager**:
   - Primary: [Niri](https://github.com/niri-wm/niri) — Scrollable tiling Wayland compositor
-  - Secondary: [Hyprland](https://hyprland.org/)
-- **Status Bar**: waybar
-- **Launcher**: rofi-laucher
-- **Notifications**: swaync
-- **Terminal**: foot / kitty
-- **Shell**: zsh / bash
-- **Editor**: neovim/vim
-- **Other**: bira(themes zsh), Git, Docker-ready environment
+  - Secondary: [Hyprland](https://hyprland.org/) — Dynamic tiling Wayland compositor
+- **Status Bar**: [waybar](https://github.com/Alexays/Waybar) — Highly customizable Wayland bar
+- **Launcher**: [rofi](https://github.com/davatorium/rofi) — Window switcher, application launcher and dmenu replacement
+- **Notifications**: [swaync](https://github.com/ErikReider/SwayNotificationCenter) — Notification daemon for Wayland
+- **Terminal**: [foot](https://codeberg.org/dnkl/foot) / [kitty](https://sw.kovidgoyal.net/kitty/) — Modern terminal emulators
+- **Shell**: zsh / bash with custom configurations
+- **Editor**: [neovim](https://neovim.io/) — Hyperextensible Vim-based text editor
+- **Other**: bira (zsh theme), Git, Docker-ready environment
 
 ## 📁 Repository Structure
 
@@ -95,52 +119,126 @@ vuongngo/dotfiles/
 
 ### Environment Files
 
-- **.config/**: User-level configurations following XDG Base Directory specification
-- **.gitignore**: Excludes large files, temporary caches, and sensitive data
+- **.config/**: User-level configurations following XDG Base Directory specification for clean organization
+- **.gitignore**: Excludes large files, temporary caches, sensitive data, and OS-specific files
 
-## 🚀 Quick Start
+## 🚀 Installation & Setup
 
-### Prerequisites:
+### Prerequisites
 
-```bash
-# Arch Linux with the following installed:
-- git
-- stow
-- niri or hyprland
-- zsh
-- neovim
-- rofi
-```
+- **Arch Linux** with base system installed
+- **Git** for cloning the repository
+- **GNU Stow** for managing dotfiles
+- **Basic packages**: zsh, neovim, rofi, waybar, etc.
 
-### Installation:
+### Quick Installation
 
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/vuongngo/dotfiles.git ~/dotfiles-linux
-   cd ~/dotfiles-linux
+   git clone https://github.com/vuongngo/dotfiles.git
+   cd dotfiles
    ```
 
-2. **Run installation scripts** (optional):
+2. **Install GNU Stow** (if not already installed):
 
    ```bash
-   ./install/install_zsh.sh    # Setup Zsh with plugins
-   ./install/install_bambo.sh  # Install Bamboo utility
+   sudo pacman -S stow
    ```
+
+3. **Stow configurations**:
+
+   ```bash
+   # For Niri (primary)
+   stow .config niri
+
+   # For Hyprland (secondary)
+   stow .config hyprland
+   ```
+
+4. **Run setup scripts**:
+   ```bash
+   ./install/install_zsh.sh     # Configure Zsh shell
+   ./install/install_niri.sh    # Install Niri WM
+   # or ./install/install_hyprland.sh for Hyprland
+   ```
+
+### Available Installation Scripts
+
+- `install_zsh.sh`: Complete Zsh setup with plugins and themes
+- `install_niri.sh`: Niri window manager installation
+- `install_hyprland.sh`: Hyprland window manager installation
+- `install_yay.sh`: Install Yay AUR helper
+- `install_zram.sh`: Configure ZRAM for better memory management
+- `install_gnome.sh`: GNOME desktop environment setup
+- `install_kde`: KDE Plasma desktop setup
+- `tool_health.sh`: System health check and diagnostics
+
+## 🐛 Known Issues & Troubleshooting
+
+### Common Problems
+
+- **Wayland compatibility issues**: Some legacy applications may require XWayland
+- **GPU driver problems**: Ensure proper drivers for hardware acceleration
+- **Font rendering issues**: Install additional fonts for better display
+- **Audio configuration**: PipeWire setup may need tweaking for some hardware
+
+### Troubleshooting Steps
+
+1. **Check system logs**:
+
+   ```bash
+   journalctl -xe  # View recent system logs
+   ```
+
+2. **Verify configurations**:
+   - Ensure files are properly stowed: `ls -la ~/.config/`
+   - Check syntax: `niri validate-config` or `hyprctl reload`
+
+3. **Update system**:
+
+   ```bash
+   sudo pacman -Syu  # Update all packages
+   ```
+
+4. **Restart services**:
+   ```bash
+   systemctl --user restart pipewire  # Restart audio service
+   ```
+
+### Performance Optimization
+
+- Use `install_zram.sh` for systems with limited RAM
+- Monitor performance with MangoHud
+- Run `tool_health.sh` for system diagnostics
+
+## 🤝 Contributing
+
+This repository is primarily for personal use but welcomes improvements and suggestions. Feel free to:
+
+- Open issues for bugs or feature requests
+- Submit pull requests for enhancements
+- Share your own configurations or scripts
+
+## 📄 License
+
+This project is licensed under the MIT License. See LICENSE file for details (if applicable).
+
+````
 
 3. **Link configurations with GNU Stow**:
 
-   ```bash
-   cd ~/dotfiles-linux
+```bash
+cd ~/dotfiles-linux
 
-   # For Niri (primary setup)
-   stow niri
-   stow -t ~/ .  # Symlink .config files
+# For Niri (primary setup)
+stow niri
+stow -t ~/ .  # Symlink .config files
 
-   # Or for Hyprland (alternative setup)
-   stow hyprland
-   stow -t ~/ .  # Symlink .config files
-   ```
+# Or for Hyprland (alternative setup)
+stow hyprland
+stow -t ~/ .  # Symlink .config files
+````
 
 4. **Reload your window manager**:
    - **Niri**: `Super+Alt+R` or restart the session
