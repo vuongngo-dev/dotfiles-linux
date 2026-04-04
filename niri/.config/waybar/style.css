@@ -14,8 +14,6 @@
 window#waybar {
     background: rgba(17, 17, 27, 0.8); /* Catppuccin Crust - Deep Matte */
     color: #cdd6f4;
-    /* Subtle 1px bottom accent border */
-    border: 2px solid rgba(55, 55, 55, 0.8);
     margin: 0;
 }
 
@@ -56,7 +54,6 @@ window#waybar {
 #workspaces button.active {
     color: #b4befe; /* Lavender - Active Workspace focus */
     background: rgba(180, 190, 254, 0.1);
-    border-bottom: 2px solid #b4befe; /* Slightly thicker indicator for visibility */
 }
 
 /* --- CENTER SECTION: TIME & DATE --- */
