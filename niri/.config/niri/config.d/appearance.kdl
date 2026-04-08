@@ -11,7 +11,7 @@
 // https://niri-wm.github.io/niri/Configuration%3A-Layout.html
 
 layout {
-    gaps 8
+    gaps 6
     center-focused-column "never"
     background-color "transparent"
     
@@ -36,8 +36,9 @@ layout {
     
     // off all effects
     shadow { off; }
-    insert-hint { off; }
     border { off; }
+    
+    insert-hint { on; }
     
     focus-ring {
         on
