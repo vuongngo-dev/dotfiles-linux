@@ -85,7 +85,7 @@ recent-windows {
 // https://niri-wm.github.io/niri/Configuration%3A-Window-Rules.html
 
 window-rule {
-    geometry-corner-radius 5
+    geometry-corner-radius 0
     clip-to-geometry true
     shadow { off; }
 }

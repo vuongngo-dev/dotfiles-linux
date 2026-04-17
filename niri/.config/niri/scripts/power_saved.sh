@@ -28,14 +28,14 @@ else
     rm "$FLAG"
 
     # 1. Restore CPU to performance (For SQL/Java workloads)
-    powerprofilesctl set performance
+    powerprofilesctl set balanced
 
-    # 2. Restore screen brightness to 90%
-    brightnessctl set 90%
+    # 2. Restore screen brightness to 80%
+    brightnessctl set 80%
 
     # 3. Notify the user
     notify-send -h string:x-dunst-stack-tag:power_save \
                 -u normal \
                 -i battery-full-symbolic \
-                "Power System" "NORMAL MODE: RESTORED ⚡\nAnimations Enabled | Performance Peak"
+                "Power System" "NORMAL MODE: RESTORED ⚡\nBalanced Performance"
 fi

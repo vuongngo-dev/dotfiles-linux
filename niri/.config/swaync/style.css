@@ -1,17 +1,22 @@
 /* --- CATPPUCCIN MOCHA LAVENDER PALETTE --- */
 @define-color base      #1e1e2e;
 @define-color mantle    #181825;
+@define-color crust     #11111b;
 @define-color surface0  #313244;
 @define-color surface1  #45475a;
+@define-color surface2  #585b70;
 @define-color text      #cdd6f4;
 @define-color subtext0  #a6adc8;
-@define-color lavender  #b4befe;
+@define-color lavender  #b4befe; /* Màu chủ đạo */
+@define-color blue      #89b4fa;
 @define-color red       #f38ba8;
+@define-color mauve     #cba6f7;
 
 /* --- GLOBAL SETTINGS --- */
 * {
   font-family: 'JetBrainsMono Nerd Font', sans-serif;
-  font-size: 12px;
+  font-size: 13px;
+  font-weight: bold;
   color: @text;
   box-shadow: none;
   text-shadow: none;
@@ -22,124 +27,107 @@
 
 /* --- MAIN CONTROL CENTER --- */
 .control-center {
-  background: rgba(30, 30, 46, 0.9);
-  border: 1px solid @surface0;
-  border-radius: 2px; /* Subtle rounding applied */
-  padding: 6px; 
+  background: @base; /* Dùng màu thuần base thay vì rgba */
+  border: 2px solid @lavender; /* Viền màu chủ đạo */
+  border-radius: 12px;
+  padding: 12px; 
 }
 
 /* --- COMMON WIDGET STYLES --- */
 .widget-title, .widget-dnd, .widget-mpris, .widget-volume, 
 .widget-backlight, .widget-menubar, .widget-buttons-grid {
   background: @mantle;
-  border-radius: 2px; /* Subtle rounding for unified look */
-  margin-bottom: 4px;
+  border-radius: 12px;
+  margin-bottom: 10px;
   border: 1px solid @surface0;
+  padding: 10px;
 }
 
 /* --- TITLE WIDGET --- */
 .widget-title {
-  padding: 4px 10px;
   font-weight: 800;
+  background: transparent;
+  border: none;
 }
 .widget-title > button {
   background: @surface0;
-  border-radius: 2px;
-  padding: 2px 10px;
+  border-radius: 8px;
+  padding: 4px 12px;
 }
 .widget-title > button:hover {
   background: @red;
   color: @base;
 }
 
-/* --- SLIDERS (VOLUME & BACKLIGHT) --- */
-.widget-volume, .widget-backlight {
-  padding: 8px 12px; 
-}
+/* --- SLIDERS --- */
 scale trough {
   background: @surface0;
-  border-radius: 2px;
-  min-height: 8px;
+  border-radius: 8px;
+  min-height: 12px;
 }
 scale highlight {
   background: @lavender;
-  border-radius: 2px;
+  border-radius: 8px;
 }
 scale slider {
   background: @text;
-  border-radius: 2px; /* Squared with a touch of roundness */
-  min-width: 10px;
-  min-height: 10px;
+  border-radius: 50%;
+  min-width: 16px;
+  min-height: 16px;
 }
 
-/* --- BUTTONS GRID --- */
-.widget-buttons-grid {
-  padding: 4px;
-}
+/* --- BUTTONS GRID (LÀM TO HƠN & DÙNG MÀU CHỦ ĐẠO) --- */
 .widget-buttons-grid > flowbox > flowboxchild > button {
   background: @surface0;
-  border-radius: 2px;
-  padding: 8px 0;
-  margin: 2px;
-  font-size: 14px; 
-  transition: all 0.2s;
+  border-radius: 10px;
+  padding: 15px 0; /* Tăng padding dọc để ô to hơn */
+  margin: 5px;    /* Khoảng cách giữa các ô rộng rãi hơn */
+  font-size: 18px; /* Icon to hơn */
+  border: 1px solid transparent;
 }
+
 .widget-buttons-grid > flowbox > flowboxchild > button:hover {
   background: @surface1;
   border: 1px solid @lavender;
 }
+
+/* Trạng thái đang bật: Dùng thuần màu Lavender */
 .widget-buttons-grid > flowbox > flowboxchild > button:checked {
   background: @lavender;
-  color: @base;
+  color: @base; /* Chữ/Icon chuyển sang màu tối trên nền sáng */
 }
 
 /* --- MENUBAR (POWER PROFILES) --- */
-.widget-menubar {
-  padding: 4px;
-}
-.widget-menubar > menubar {
-  display: flex;
-  justify-content: center;
-}
 .widget-menubar > menubar > menuitem {
   background: @surface0;
-  border-radius: 2px;
-  padding: 4px 20px;
-  font-weight: bold;
+  border-radius: 8px;
+  padding: 8px 20px;
+  margin: 0 5px;
 }
 .widget-menubar > menubar > menuitem:hover {
-  background: @surface1;
-  color: @lavender;
-}
-
-/* --- DROPDOWN MENU PANEL --- */
-menu {
-  background: @mantle;
-  border: 1px solid @surface0;
-  border-radius: 2px;
-  padding: 2px;
-}
-menu menuitem {
-  padding: 4px 8px;
-  border-radius: 2px;
-  margin-bottom: 1px;
-}
-menu menuitem:hover {
-  background: @surface0;
+  background: @lavender;
+  color: @base;
 }
 
 /* --- NOTIFICATIONS --- */
 .notification {
   background: @mantle;
-  border-radius: 2px;
-  margin-top: 4px;
+  border-radius: 12px;
+  margin-top: 8px;
   border: 1px solid @surface0;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
-.notification-content { padding: 8px; }
+.notification:hover {
+  border: 1px solid @lavender; /* Highlight thông báo khi di chuột */
+}
+.notification-content { padding: 14px; }
+
 .close-button {
-  background: @surface0;
-  border-radius: 2px;
-  color: @subtext0;
-  margin: 2px;
+  background: @surface1;
+  border-radius: 8px;
+  color: @text;
 }
-.close-button:hover { background: @red; color: @base; }
+.close-button:hover {
+  background: @red;
+  color: @base;
+}

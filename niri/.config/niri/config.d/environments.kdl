@@ -29,9 +29,9 @@ environment {
 
     // --- NVIDIA SPECIFIC (GTX 1650) ---
     // Essential for hardware acceleration on NVIDIA laptops
-    LIBVA_DRIVER_NAME "nvidia"
-    GBM_BACKEND "nvidia-drm"
-    __GLX_VENDOR_LIBRARY_NAME "nvidia"
+    // LIBVA_DRIVER_NAME "nvidia"
+    // GBM_BACKEND "nvidia-drm"
+    // __GLX_VENDOR_LIBRARY_NAME "nvidia"
 
     // --- FCITX 5 ---
     GTK_IM_MODULE "fcitx"

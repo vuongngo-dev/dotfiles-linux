@@ -25,20 +25,16 @@ chosen="$(echo -e "$options" | rofi -dmenu -i -p "Power" \
 
 case "$chosen" in
     "$lock")
-        # Direct call to swaylock (using your Matrix green color -c 003300)
-        swaylock -f -c 003300
+        hyprlock
         ;;
     "$logout")
         # Correct Niri action to exit the session
         niri msg action quit --skip-confirmation
         ;;
-    "$suspend")
-        # 1. Close SwayNC panel if open
-        swaync-client -cp
-        # 2. Lock screen first for security
-        swaylock -f -c 003300 &
-        sleep 1
-        # 3. System-level suspend
+    "$suspend")        
+        swaync-client -cp &
+        hyprlock & 
+        sleep 0.5
         systemctl suspend
         ;;
     "$reboot")

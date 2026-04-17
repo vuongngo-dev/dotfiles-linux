@@ -6,13 +6,13 @@
     font-size: 13px; /* Increased from 11px/12px for better legibility */
     font-weight: 700;
     border: none;
-    border-radius: 5px; /* Sharp corners to maintain Niri's 0px geometry */
-    min-height: 0;   /* Keeps the bar slim despite larger font */
+    border-radius: 0px; /* Sharp corners to maintain Niri's 0px geometry */
+    min-height: 0px;   /* Keeps the bar slim despite larger font */
 }
 
 /* MAIN BAR STRUCTURE - Solid, matte, and edge-to-edge */
 window#waybar {
-    background: rgba(17, 17, 27, 0.8); /* Catppuccin Crust - Deep Matte */
+    background: rgba(17, 17, 27, 0.9); /* Catppuccin Crust - Deep Matte */
     color: #cdd6f4;
     margin: 0;
 }

@@ -35,8 +35,6 @@ binds {
     Mod+Tab { toggle-overview; }
     Mod+Shift+Slash { show-hotkey-overlay; }
     Mod+T { toggle-column-tabbed-display; }
-    Mod+Shift+Alt+Delete { quit; }
-    Mod+Shift+Alt+P { power-off-monitors; }
 
     // ============ SCREENSHOTS ============
     Print        { screenshot; }
@@ -81,8 +79,11 @@ binds {
     Mod+9 { focus-workspace 9; }
     Mod+0 { focus-workspace 10; }
     
-    Mod+Page_Down { focus-workspace-down; }
     Mod+Page_Up   { focus-workspace-up; }
+    Mod+Page_Down { focus-workspace-down; }
+    
+    Mod+Alt+Up { focus-workspace-up; }
+    Mod+Alt+Down   { focus-workspace-down; }
 
     // Focus - Monitor
     Ctrl+Left  { focus-monitor-left; }
@@ -116,13 +117,14 @@ binds {
     Mod+Shift+9 { move-column-to-workspace 9; }
     Mod+Shift+0 { move-column-to-workspace 10; }
     
-    Mod+Alt+Up   { move-column-to-workspace-up; }
-    Mod+Alt+Down { move-column-to-workspace-down; }
+    Mod+Shift+Page_Up { move-window-to-workspace-up; }
+    Mod+Shift+Page_Down { move-window-to-workspace-down; }
+
+    Mod+Shift+Alt+Up   { move-window-to-workspace-up; }
+    Mod+Shift+Alt+Down { move-window-to-workspace-down; }
+
     Mod+Alt+Left { consume-or-expel-window-left; }
     Mod+Alt+Right { consume-or-expel-window-right; }
-    
-    Mod+Shift+Page_Down { move-window-to-workspace-down; }
-    Mod+Shift+Page_Up { move-window-to-workspace-up; }
     
     // Move - Monitor
     Shift+Ctrl+Left  { move-column-to-monitor-left; }
