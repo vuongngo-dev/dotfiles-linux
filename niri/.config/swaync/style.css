@@ -29,18 +29,18 @@
 .control-center {
   background: @base; /* Dùng màu thuần base thay vì rgba */
   border: 2px solid @lavender; /* Viền màu chủ đạo */
-  border-radius: 12px;
+  border-radius: 5px;
   padding: 12px; 
 }
 
 /* --- COMMON WIDGET STYLES --- */
-.widget-title, .widget-dnd, .widget-mpris, .widget-volume, 
+.widget-title, .widget-dnd, .widget-volume, 
 .widget-backlight, .widget-menubar, .widget-buttons-grid {
   background: @mantle;
-  border-radius: 12px;
-  margin-bottom: 10px;
+  border-radius: 5px;
+  margin-bottom: 5px 10px;
   border: 1px solid @surface0;
-  padding: 10px;
+  padding: 5px;
 }
 
 /* --- TITLE WIDGET --- */

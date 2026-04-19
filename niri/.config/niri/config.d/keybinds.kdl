@@ -85,6 +85,9 @@ binds {
     Mod+Alt+Up { focus-workspace-up; }
     Mod+Alt+Down   { focus-workspace-down; }
 
+    Mod+Alt+K { focus-workspace-up; }
+    Mod+Alt+J   { focus-workspace-down; }
+
     // Focus - Monitor
     Ctrl+Left  { focus-monitor-left; }
     Ctrl+Down  { focus-monitor-down; }
@@ -123,9 +126,15 @@ binds {
     Mod+Shift+Alt+Up   { move-window-to-workspace-up; }
     Mod+Shift+Alt+Down { move-window-to-workspace-down; }
 
+    Mod+Shift+Alt+K   { move-window-to-workspace-up; }
+    Mod+Shift+Alt+J { move-window-to-workspace-down; }
+
     Mod+Alt+Left { consume-or-expel-window-left; }
     Mod+Alt+Right { consume-or-expel-window-right; }
-    
+
+    Mod+Alt+H { consume-or-expel-window-left; }
+    Mod+Alt+L { consume-or-expel-window-right; }
+
     // Move - Monitor
     Shift+Ctrl+Left  { move-column-to-monitor-left; }
     Shift+Ctrl+Down  { move-column-to-monitor-down; }
@@ -174,5 +183,4 @@ binds {
 
     // ============ SESSION ============
     Mod+Ctrl+Alt+Delete { quit; }
-    Mod+Ctrl+Alt+End { quit skip-confirmation=true; }
 }
