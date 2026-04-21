@@ -26,6 +26,9 @@ environment {
     GDK_BACKEND "wayland,x11"
     CLUTTER_BACKEND "wayland"
     SDL_VIDEODRIVER "wayland"
+    QT_AWT_WM_NONREPARENTING "1"
+    QT_AUTO_SCREEN_SCALE_FACTOR "1"
+    GDK_SCALE "1"
 
     // --- NVIDIA SPECIFIC (GTX 1650) ---
     // Essential for hardware acceleration on NVIDIA laptops
@@ -42,10 +45,9 @@ environment {
     DefaultIMModule "fcitx"
 
     // --- JAVA & MISC ---
-    // Essential for your Java studies (Fixes blank window issues in Wayland)
     _JAVA_AWT_WM_NONREPARENTING "1"
-    
+    _JAVA_OPTIONS "-Dsun.java2d.uiScale=1.25"
+
     // --- SET THEMES ---
     
 }
-    

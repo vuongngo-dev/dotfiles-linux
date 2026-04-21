@@ -15,7 +15,7 @@ binds {
     Mod+Return { spawn "foot"; }
     Mod+E { spawn "nautilus"; }
     Mod+A { spawn "rofi" "-show" "drun" "-theme" "~/.config/rofi/config.rasi"; }
-    Mod+F { spawn "rofi" "-show" "drun" "-theme" "~/.config/rofi/config.rasi" "-run-command" "switcherooctl {cmd}" "-display-drun" "🚀 NVIDIA"; }
+    Mod+Shift+A { spawn "~/.config/niri/scripts/rofi-nvidia.sh"; }
     Mod+N { spawn "swaync-client" "-t" "-sw"; }
     Mod+Ctrl+Alt+L { spawn "hyprlock"; }
     
@@ -40,7 +40,7 @@ binds {
     Print        { screenshot; }
     Mod+Shift+S  { screenshot; }
     Mod+Print    { screenshot-screen; }
-    Alt+Print    { screenshot-window; }
+    Shift+Print    { screenshot-window; }
 
     // ============ RESIZE WINDOWS ============
     Mod+Ctrl+Right { set-column-width "+40"; }

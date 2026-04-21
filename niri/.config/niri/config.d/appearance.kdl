@@ -38,13 +38,17 @@ layout {
     shadow { off; }
     border { off; }
     
-    insert-hint { on; }
+    insert-hint {
+        on
+        color "#ffc87f80"
+    }
     
     focus-ring {
         on
         width 2
         active-color "#ffffff"
         inactive-color "#2c2c2c"
+        urgent-color "#9b0000"
     }
 
     struts {
@@ -90,15 +94,19 @@ window-rule {
     shadow { off; }
 }
 
-
 window-rule {
-    match title="^Open File"
-    match title="^Select a File"
-    match title="^Choose wallpaper"
-    match title="^Open Folder"
-    match title="^Save As"
-    match title="^Library"
-    match title="^File Upload"
+    match app-id="pop-id"
+    match app-id="bubble"
+    match app-id="task_dialog"
+    match app-id="Preferences"
+    match app-id="dialog"
+    match app-id="menu"
+    match app-id="Organizer"
+    match app-id="About"
+    match app-id="toolbox"
+    match app-id="page-info"
+    match app-id="webconsole"
+    match app-id="Authy"
     match title="wants to save$"
     match title="wants to open$"
     match title=r#".*(Dialog|Properties|Preferences|Settings|Rename).*"#
@@ -106,20 +114,35 @@ window-rule {
     match title=r#".*Sign in - Google Accounts — Mozilla Firefox"#
 
     open-floating true
-    default-column-width { proportion 0.6; }
-    default-window-height { proportion 0.6; }
+    default-column-width { proportion 0.5; }
+    default-window-height { proportion 0.5; }
 }
 
 window-rule {
+    match app-id="gnome-calculator"
+    match app-id="org.gnome.Calculator"
+    
+    open-floating true
+    default-column-width { proportion 0.2; }
+    default-window-height { proportion 0.5; }
+}
+
+window-rule {
+    match app-id="Nautilus"
+    match app-id="org.gnome.Nautilus"
+    match app-id="Snapshot"
+    match app-id="org.gnome.Snapshot"
     match app-id="pavucontrol"
     match app-id="org.pulseaudio.pavucontrol"
     match app-id="nm-connection-editor"
     match app-id="blueman-manager"
     match app-id="wdisplays"
     match app-id="nwg-look"
+    match app-id=r#".*DAMX$"#
     match app-id=r#"org\.gtk\.FileChooserDialog"#
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
-
+    
+    
     open-floating true
     default-column-width { proportion 0.6; }
     default-window-height { proportion 0.6; }
@@ -132,11 +155,10 @@ window-rule {
 
 window-rule {
     match app-id="^jetbrains-.*"
-}
-
-window-rule {
     match app-id=r#"steam"# title=r#".*(Friends|Settings|Properties).*"#
+
     open-floating true
+    default-column-width { proportion 0.6; }
 }
 
 window-rule {
@@ -154,17 +176,14 @@ window-rule {
 
 layer-rule {
     match namespace="waybar"
+    match namespace="^swaync-control-center$"
+
     match at-startup=true
     shadow { off; }
     place-within-backdrop true
 }
 
-layer-rule {
-    match namespace="^wallpaper$"
-    place-within-backdrop true
-}
-
-// Make fuzzel FLOAT.
+// Make rofi FLOAT.
 layer-rule {
     match namespace="^launcher$"
     shadow { off; }
