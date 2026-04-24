@@ -29,12 +29,15 @@ binds {
     Mod+Q { close-window; }
     Mod+F4 { close-window; }
     Mod+W { toggle-window-floating; }
+    Mod+D { toggle-column-tabbed-display; }
     Mod+Shift+W { switch-focus-between-floating-and-tiling; }
     Mod+O { maximize-column; }
     Mod+F11 { fullscreen-window; }
     Mod+Tab { toggle-overview; }
     Mod+Shift+Slash { show-hotkey-overlay; }
     Mod+T { toggle-column-tabbed-display; }
+    Mod+P repeat=false { spawn-sh "wl-mirror $(niri msg --json focused-output | jq -r .name)"; }
+    Mod+B { spawn "sh" "-c" "if pgrep -x waybar > /dev/null; then pkill waybar; else waybar & disown; fi"; }
 
     // ============ SCREENSHOTS ============
     Print        { screenshot; }

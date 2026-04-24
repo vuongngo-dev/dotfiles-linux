@@ -32,9 +32,9 @@ environment {
 
     // --- NVIDIA SPECIFIC (GTX 1650) ---
     // Essential for hardware acceleration on NVIDIA laptops
-    // LIBVA_DRIVER_NAME "nvidia"
-    // GBM_BACKEND "nvidia-drm"
-    // __GLX_VENDOR_LIBRARY_NAME "nvidia"
+    LIBVA_DRIVER_NAME "nvidia"
+    GBM_BACKEND "nvidia-drm"
+    __GLX_VENDOR_LIBRARY_NAME "nvidia"
 
     // --- FCITX 5 ---
     GTK_IM_MODULE "fcitx"
@@ -46,8 +46,7 @@ environment {
 
     // --- JAVA & MISC ---
     _JAVA_AWT_WM_NONREPARENTING "1"
-    _JAVA_OPTIONS "-Dsun.java2d.uiScale=1.25"
+    _JAVA_OPTIONS "-Dsun.java2d.uiScale=1.0"
 
-    // --- SET THEMES ---
-    
+    // --- SET THEMES ---   
 }

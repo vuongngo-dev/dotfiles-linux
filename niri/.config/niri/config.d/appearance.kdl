@@ -8,6 +8,17 @@
 //=====================================
 // Layout
 //=====================================
+// https://github.com/niri-wm/niri/wiki/Overview
+
+overview {
+    zoom 0.5
+    backdrop-color "#131329"
+    workspace-shadow { off; }
+}
+
+//=====================================
+// Layout
+//=====================================
 // https://niri-wm.github.io/niri/Configuration%3A-Layout.html
 
 layout {
@@ -40,7 +51,7 @@ layout {
     
     insert-hint {
         on
-        color "#ffc87f80"
+        color "#ffffff1c"
     }
     
     focus-ring {
@@ -64,16 +75,18 @@ layout {
 //=====================================
 // https://niri-wm.github.io/niri/Configuration%3A-Recent-Windows.html
 recent-windows {
-    debounce-ms 300
+    debounce-ms 350
     open-delay-ms 150
 
     highlight {
-        active-color "#d8dadd3d"
-        padding 5
+        active-color "#ffffff65"
+        urgent-color "#ff9999ff"
+        padding 30
+        corner-radius 0
     }
 
     previews {
-        max-height 500
+        max-height 400
         max-scale 0.5
     }
 
@@ -175,6 +188,12 @@ window-rule {
 // https://niri-wm.github.io/niri/Configuration%3A-Layer-Rules.html
 
 layer-rule {
+    match namespace="^notifications$"
+
+    block-out-from "screencast"
+}
+
+layer-rule {
     match namespace="waybar"
     match namespace="^swaync-control-center$"
 
@@ -188,3 +207,10 @@ layer-rule {
     match namespace="^launcher$"
     shadow { off; }
 }
+
+// Put swaybg inside the overview backdrop.
+layer-rule {
+    match namespace="^wallpaper$"
+    place-within-backdrop true
+}
+

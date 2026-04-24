@@ -41,14 +41,6 @@
     "buttons-grid": {
       "actions": [
         {
-          "label": "󰖩 ",
-          "command": "nm-connection-editor"
-        },
-        {
-          "label": "󰂯",
-          "command": "blueman-manager"
-        },
-        {
           "label": " ",
           "type": "toggle",
           "command": "bash ~/.config/niri/scripts/airplane_mode.sh",

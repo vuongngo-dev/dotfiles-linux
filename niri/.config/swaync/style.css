@@ -62,27 +62,27 @@
 /* --- SLIDERS --- */
 scale trough {
   background: @surface0;
-  border-radius: 8px;
-  min-height: 12px;
+  border-radius: 5px;
+  min-height: 8px;
 }
 scale highlight {
   background: @lavender;
-  border-radius: 8px;
+  border-radius: 5px;
 }
 scale slider {
   background: @text;
   border-radius: 50%;
-  min-width: 16px;
-  min-height: 16px;
+  min-width: 10px;
+  min-height: 10px;
 }
 
 /* --- BUTTONS GRID (LÀM TO HƠN & DÙNG MÀU CHỦ ĐẠO) --- */
 .widget-buttons-grid > flowbox > flowboxchild > button {
   background: @surface0;
   border-radius: 10px;
-  padding: 15px 0; /* Tăng padding dọc để ô to hơn */
-  margin: 5px;    /* Khoảng cách giữa các ô rộng rãi hơn */
-  font-size: 18px; /* Icon to hơn */
+  padding: 14px; /* Tăng padding dọc để ô to hơn */
+  margin: 10px;    /* Khoảng cách giữa các ô rộng rãi hơn */
+  font-size: 24px; /* Icon to hơn */
   border: 1px solid transparent;
 }
 
@@ -100,9 +100,10 @@ scale slider {
 /* --- MENUBAR (POWER PROFILES) --- */
 .widget-menubar > menubar > menuitem {
   background: @surface0;
+  align-items: center;
   border-radius: 8px;
-  padding: 8px 20px;
-  margin: 0 5px;
+  padding: 20px;
+  margin: 5px;
 }
 .widget-menubar > menubar > menuitem:hover {
   background: @lavender;
@@ -112,7 +113,7 @@ scale slider {
 /* --- NOTIFICATIONS --- */
 .notification {
   background: @mantle;
-  border-radius: 12px;
+  border-radius: 5px;
   margin-top: 8px;
   border: 1px solid @surface0;
   box-shadow: 0 4px 15px rgba(0,0,0,0.3);
@@ -124,7 +125,7 @@ scale slider {
 
 .close-button {
   background: @surface1;
-  border-radius: 8px;
+  border-radius: 5px;
   color: @text;
 }
 .close-button:hover {
