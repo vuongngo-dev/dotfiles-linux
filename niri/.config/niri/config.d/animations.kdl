@@ -11,8 +11,7 @@
 // https://niri-wm.github.io/niri/Configuration%3A-Animations.html
 
 animations {
-    // Tắt slowdown để đảm bảo tốc độ phản hồi tức thì
-    slowdown 0.6
+    slowdown 0.8
 
     window-open {
         spring damping-ratio=0.6 stiffness=1100 epsilon=0.0001

@@ -22,7 +22,7 @@ overview {
 // https://niri-wm.github.io/niri/Configuration%3A-Layout.html
 
 layout {
-    gaps 6
+    gaps 8
     center-focused-column "never"
     background-color "transparent"
     
@@ -182,6 +182,27 @@ window-rule {
     variable-refresh-rate true
 }
 
+// Indicate screencasted windows with red colors.
+window-rule {
+    match is-window-cast-target=true
+
+    focus-ring {
+        active-color "#f38ba8"
+        inactive-color "#7d0d2d"
+    }
+
+    border {
+        inactive-color "#7d0d2d"
+    }
+
+    shadow { off; }
+
+    tab-indicator {
+        active-color "#f38ba8"
+        inactive-color "#7d0d2d"
+    }
+}
+
 //=====================================
 // LAYER RULES
 //=====================================
@@ -213,4 +234,3 @@ layer-rule {
     match namespace="^wallpaper$"
     place-within-backdrop true
 }
-

@@ -12,7 +12,7 @@ NC='\033[0m'
 show_logo() {
     clear
     echo -e "${LAVENDER}"
-    cat << "EOF"
+    cat <<"EOF"
   ================================================
     _   ____  ______  _  _______  _  ___________ 
    | | / / / / / __ \/ |/ / ___/ / |/ / ___/ __ \
@@ -41,33 +41,34 @@ echo -e "${BLUE}====================================================${NC}\n"
 # ------------------------------------------------------------------------------
 NIRI_PACKAGES=(
     # --- Core Compositor, Wayland Protocols & X11 Fallback ---
-    "niri"                        # Core Wayland compositor
-    "xwayland-satellite"          # Virtual X11 server for legacy apps (Discord, etc.)
-    "xorg-xwayland"               # Core XWayland library
-    "xdg-desktop-portal"          # Core portal communication
-    "xdg-desktop-portal-gnome"    # Crucial for screen sharing on Niri
-    "qt5-wayland" "qt6-wayland"   # Native Wayland support for Qt apps
+    "niri"                      # Core Wayland compositor
+    "xwayland-satellite"        # Virtual X11 server for legacy apps (Discord, etc.)
+    "xorg-xwayland"             # Core XWayland library
+    "xdg-desktop-portal"        # Core portal communication
+    "xdg-desktop-portal-gnome"  # Crucial for screen sharing on Niri
+    "qt5-wayland" "qt6-wayland" # Native Wayland support for Qt apps
 
     # --- File Manager ---
     "gvfs" "gvfs-mtp" # Trash support, network mounting, and mobile devices
 
     # --- Desktop Environment & UI Components ---
-    "waybar"                      # Status bar
-    "rofi-wayland"                # Application launcher
-    "swaync"                      # Notification daemon & Control Center
-    "swaybg"                      # Wallpaper daemon
-    "hyprlock" "hypridle"         # HYPRLAND LOCKING & IDLE MANAGEMENT
+    "waybar"              # Status bar
+    "rofi-wayland"        # Application launcher
+    "swaync"              # Notification daemon & Control Center
+    "swaybg"              # Wallpaper daemon
+    "hyprlock" "hypridle" # HYPRLAND LOCKING & IDLE MANAGEMENT
 
     # --- System Infrastructure & Hardware Integration ---
-    "foot"                        # GPU-accelerated terminal emulator
-    "polkit-gnome"                # Graphical password prompts for root access
-    "wl-clipboard" "cliphist"     # Clipboard manager & history
-    "brightnessctl"               # CLI for display brightness
-    "pavucontrol"                 # GUI for volume management
-    "network-manager-applet"      # Tray icon for WiFi
-    "blueman"                     # Tray icon for Bluetooth
-    "libnotify"                   # Desktop notifications library
-    "wlsunset"                    # Blue light filter
+    "foot"                    # GPU-accelerated terminal emulator
+    "polkit-gnome"            # Graphical password prompts for root access
+    "wl-clipboard" "cliphist" # Clipboard manager & history
+    "brightnessctl"           # CLI for display brightness
+    "pavucontrol"             # GUI for volume management
+    "network-manager-applet"  # Tray icon for WiFi
+    "blueman"                 # Tray icon for Bluetooth
+    "libnotify"               # Desktop notifications library
+    "wlsunset"                # Blue light filter
+    "wl-mirror"               # Mirror screen
 )
 
 # ------------------------------------------------------------------------------
@@ -81,3 +82,4 @@ sudo pacman -Rns --noconfirm xdg-desktop-portal-hyprland xdg-desktop-portal-wlr 
 # ------------------------------------------------------------------------------
 echo -e "\n${YELLOW}[2/2] Installing Niri ecosystem and Sway tools...${NC}"
 sudo pacman -Sy --needed --noconfirm "${NIRI_PACKAGES[@]}"
+

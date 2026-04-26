@@ -27,7 +27,7 @@ window {
     margin:                      0px;
     padding:                     0px;
     border:                      2px solid;
-    border-radius:               24px; /* Modern rounded corners */
+    border-radius:               5px; /* Modern rounded corners */
     border-color:                @border-colour;
     background-color:            @background-colour;
     cursor:                      "default";

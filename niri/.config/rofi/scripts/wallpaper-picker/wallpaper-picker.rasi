@@ -25,11 +25,11 @@ window {
     anchor:                      center;
     fullscreen:                  false;
     width:                       80%;
-    height:                      45%;
+    height:                      42%;
     
     enabled:                     true;
     border:                      2px solid;
-    border-radius:               24px; /* Smoother corners like Niri */
+    border-radius:               5px; /* Smoother corners like Niri */
     border-color:                @border-colour;
     background-color:            @background-colour;
     cursor:                      "default";
@@ -48,13 +48,13 @@ mainbox {
 inputbar {
     enabled:                     true;
     margin:                      0% 20% 10px 20%;
-    padding:                     12px 25px;
+    padding:                     12px 10px;
     background-color:            @alternate-background;
     text-color:                  @foreground-colour;
     border:                      1px solid;
     border-color:                rgba(148, 226, 213, 0.2); /* Soft Mint border */
-    border-radius:               100px;
-    spacing:                     10px;
+    border-radius:               5px;
+    spacing:                     5px;
     children:                    [ "textbox-prompt-colon", "entry" ];
 }
 
@@ -78,7 +78,7 @@ entry {
 /*****----- Listview (The Gallery) -----*****/
 listview {
     enabled:                     true;
-    columns:                     4; /* 4 columns is the sweet spot for 80% width */
+    columns:                     5; /* 5 columns is the sweet spot for 80% width */
     lines:                       2;
     cycle:                       true;
     dynamic:                     true;
@@ -88,7 +88,7 @@ listview {
     fixed-height:                true;
     fixed-columns:               true;
     
-    spacing:                     30px;
+    spacing:                     20px;
     background-color:            transparent;
     text-color:                  @foreground-colour;
     cursor:                      "default";
@@ -98,10 +98,10 @@ listview {
 element {
     enabled:                     true;
     orientation:                 vertical;
-    spacing:                     12px;
+    spacing:                     5px;
     margin:                      0px;
-    padding:                     15px;
-    border-radius:               18px;
+    padding:                     10px;
+    border-radius:               5px;
     background-color:            rgba(255, 255, 255, 0.03); /* Glass card effect */
     text-color:                  @foreground-colour;
     cursor:                      pointer;
@@ -117,7 +117,7 @@ element selected.normal {
 
 element-icon {
     background-color:            transparent;
-    size:                        220px; /* Perfectly sized for 4 columns */
+    size:                        200px; /* Perfectly sized for 4 columns */
     cursor:                      inherit;
     horizontal-align:            0.5;
     vertical-align:              0.5;

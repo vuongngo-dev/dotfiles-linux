@@ -28,8 +28,7 @@ window {
     location:                    center;
     anchor:                      center;
     fullscreen:                  false;
-    width:                       30%;
-    
+    width:                       30%;    
     border:                      2px solid;
     border-radius:               5px;
     border-color:                var(selected);
