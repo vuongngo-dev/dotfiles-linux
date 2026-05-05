@@ -1,4 +1,5 @@
 return {
+	-- 1. Install Catppuccin theme with transparent background and LSP integration
 	{
 		"catppuccin/nvim",
 		name = "catppuccin",
@@ -7,6 +8,13 @@ return {
 			integrations = {
 				neotree = true,
 				mason = true,
+				cmp = true,
+				gitsigns = true,
+				treesitter = true,
+				telescope = {
+					enabled = true,
+					style = "nvchad",
+				},
 				native_lsp = {
 					enabled = true,
 					virtual_text = {
@@ -29,6 +37,7 @@ return {
 		},
 	},
 
+	-- 2. Set Catppuccin as the default colorscheme for LazyVim
 	{
 		"LazyVim/LazyVim",
 		opts = {
