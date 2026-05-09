@@ -1,12 +1,11 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 20, 
+    "height": 20,
     "margin-top": 5,
     "margin-left": 8,
     "margin-right": 8,
     "spacing": 0,
-
     "modules-left": [
         "custom/launcher",
         "niri/workspaces"
@@ -23,13 +22,11 @@
         "battery",
         "custom/power"
     ],
-
     "custom/launcher": {
         "format": "",
         "on-click": "rofi -show drun -theme ~/.config/rofi/config.rasi",
         "tooltip": false
     },
-
     "niri/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
@@ -37,22 +34,11 @@
         "format": "{icon}",
         "format-icons": {
             "default": "",
-            "1": "1",
-            "2": "2",
-    	    "3": "3",
-	        "4": "4",
-	        "5": "5",
-	        "6": "6",
-	        "7": "7",
-	        "8": "8",
-	        "9": "9",
-	        "10": "0", 
             "active": "󱓻"
         }
     },
-
     "clock": {
-	    "interval": 60,
+        "interval": 60,
         "format": "  {:%H:%M |  %d %b}",
         "tooltip-format": "<tt><small>{calendar}</small></tt>",
         "on-click": "swaync-client -t -sw",
@@ -62,11 +48,11 @@
             "weeks-pos": "right",
             "on-scroll": 1,
             "format": {
-                "months":     "<span color='#bac2de'><b>{}</b></span>",
-                "days":       "<span color='#cdd6f4'><b>{}</b></span>",
-                "weeks":      "<span color='#89b4fa'><b>W{}</b></span>",
-                "weekdays":   "<span color='#f9e2af'><b>{}</b></span>",
-                "today":      "<span color='#f38ba8'><b><u>{}</u></b></span>"
+                "months": "<span color='#bac2de'><b>{}</b></span>",
+                "days": "<span color='#cdd6f4'><b>{}</b></span>",
+                "weeks": "<span color='#89b4fa'><b>W{}</b></span>",
+                "weekdays": "<span color='#f9e2af'><b>{}</b></span>",
+                "today": "<span color='#f38ba8'><b><u>{}</u></b></span>"
             }
         },
         "actions": {
@@ -75,7 +61,6 @@
             "on-scroll-down": "shift_down"
         }
     },
-
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
@@ -83,15 +68,17 @@
             "deactivated": ""
         }
     },
-
     "backlight": {
         "device": "intel_backlight",
         "format": "{icon} {percent}%",
-        "format-icons": ["󰃞", "󰃟", "󰃠"],
+        "format-icons": [
+            "󰃞",
+            "󰃟",
+            "󰃠"
+        ],
         "on-scroll-up": "brightnessctl set 1%+",
         "on-scroll-down": "brightnessctl set 1%-"
     },
-
     "pulseaudio": {
         "format": "{icon} {volume}%",
         "format-muted": "󰝟 Muted",
@@ -105,10 +92,13 @@
             "phone": "",
             "portable": "",
             "car": "",
-            "default": ["", " ", " "]
-         } 
+            "default": [
+                "",
+                " ",
+                " "
+            ]
+        }
     },
-
     "network": {
         "interval": 10,
         "format-wifi": "  {essid}",
@@ -118,9 +108,7 @@
         "format-disconnected": "⚠  Disconnected",
         "format-disabled": "  Airplane Mode",
         "format-alt": "{ifname} {signalStrength}%: {ipaddr}/{cidr}"
-
     },
-
     "battery": {
         "interval": 60,
         "states": {
@@ -130,23 +118,35 @@
         "format": "{icon} {capacity}%",
         "format-charging": "󰂄 {capacity}%",
         "format-plugged": " {capacity}%",
-        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+        "format-icons": [
+            "󰂎",
+            "󰁺",
+            "󰁻",
+            "󰁼",
+            "󰁽",
+            "󰁾",
+            "󰁿",
+            "󰂀",
+            "󰂁",
+            "󰂂",
+            "󰁹"
+        ]
     },
-
     "group/tray-expander": {
-      "orientation": "inherit",
-      "drawer": {
-        "transition-duration": 600,
-        "children-class": "tray-group-item"
-      },
-        "modules": ["custom/expand-icon", "tray"]
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 600,
+            "children-class": "tray-group-item"
+        },
+        "modules": [
+            "custom/expand-icon",
+            "tray"
+        ]
     },
-
     "tray": {
         "icon-size": 14,
         "spacing": 10
     },
-
     "custom/expand-icon": {
         "format": "",
         "tooltip": false,
@@ -155,7 +155,6 @@
         "on-scroll-left": "",
         "on-scroll-right": ""
     },
-
     "custom/power": {
         "format": "",
         "on-click": "~/.config/rofi/scripts/power-menu/power-menu.sh",
