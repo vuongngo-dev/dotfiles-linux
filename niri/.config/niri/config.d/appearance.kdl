@@ -11,7 +11,7 @@
 // https://github.com/niri-wm/niri/wiki/Overview
 
 overview {
-    zoom 0.5
+    zoom 0.4
     backdrop-color "#131329"
     workspace-shadow { off; }
 }
@@ -22,7 +22,7 @@ overview {
 // https://niri-wm.github.io/niri/Configuration%3A-Layout.html
 
 layout {
-    gaps 8
+    gaps 10
     center-focused-column "never"
     background-color "transparent"
     
@@ -48,20 +48,13 @@ layout {
     // off all effects
     shadow { off; }
     border { off; }
-    
+    focus-ring { off; }
+
     insert-hint {
         on
         color "#ffffff1c"
     }
     
-    focus-ring {
-        on
-        width 2
-        active-color "#ffffff"
-        inactive-color "#2c2c2c"
-        urgent-color "#9b0000"
-    }
-
     struts {
         left 0
         right 0
@@ -218,8 +211,8 @@ layer-rule {
     match namespace="waybar"
     match namespace="^swaync-control-center$"
 
-    match at-startup=true
     shadow { off; }
+    match at-startup=true
     place-within-backdrop true
 }
 
