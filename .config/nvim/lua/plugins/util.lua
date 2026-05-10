@@ -1,4 +1,5 @@
 return {
+    -- Setup Snacks
     {
         "folke/snacks.nvim",
         opts = {
@@ -48,5 +49,11 @@ return {
             end, desc = "Notification History" },
             { "<leader>un", function() Snacks.notifier.hide() end, desc = "Dismiss All Notifications" },
         },
-    }
+    },
+
+    -- Setup Plenary
+    {
+        "nvim-lua/plenary.nvim",
+        lazy = true,
+    },
 }

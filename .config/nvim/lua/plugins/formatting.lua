@@ -5,6 +5,7 @@ return {
       formatters_by_ft = {
         python = { "isort", "black" },
         sh = { "shfmt" },
+        lua = { "stylua" },
         json = { "prettier" },
         yaml = { "prettier" },
       },

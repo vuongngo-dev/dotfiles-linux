@@ -1,9 +1,5 @@
 return {
   {
-    "nvim-lua/plenary.nvim",
-    lazy = true,
-  },
-  {
     "AstroNvim/astrocore",
     optional = true,
     opts = function()
