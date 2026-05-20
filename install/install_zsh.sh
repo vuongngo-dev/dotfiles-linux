@@ -7,26 +7,6 @@ GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 NC='\033[0m'
 
-# --- DISPLAY LOGO ---
-show_logo() {
-    clear
-    echo -e "${LAVENDER}"
-    cat << "EOF"
-  ================================================
-    _   ____  ______  _  _______  _  ___________ 
-   | | / / / / / __ \/ |/ / ___/ / |/ / ___/ __ \
-   | |/ / /_/ / /_/ /    / (_ / /    / (_ / /_/ /
-   |___/\____/\____/_/|_/\___/ /_/|_/\___/\____/ 
-  ================================================
-EOF
-    echo -e "${NC}"
-    echo -e "${BLUE}>>> Starting System Installation ...${NC}"
-    echo "------------------------------------------------"
-}
-
-# Call the function
-show_logo
-
 # ==============================================================================
 # TERMINAL COLOR CODES
 # Used to make the output look professional and easy to read.
@@ -41,7 +21,7 @@ echo -e "${BLUE}====================================================${NC}\n"
 # We need zsh (the shell), git (to download themes/plugins), and curl.
 # ------------------------------------------------------------------------------
 echo -e "${YELLOW}[1/5] Installing core packages: Zsh, Git, Curl...${NC}"
-sudo pacman -S --noconfirm zsh git curl
+sudo pacman -Sy --needed zsh git curl
 
 # ------------------------------------------------------------------------------
 # STEP 2: Change the default shell

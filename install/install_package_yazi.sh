@@ -12,42 +12,38 @@ NC='\033[0m'
 # ==============================================================================
 
 echo -e "${BLUE}====================================================${NC}"
-echo -e "${GREEN}                   Neovim Toolkit                    ${NC}"
+echo -e "${GREEN}                   Yazi Toolkit                    ${NC}"
 echo -e "${BLUE}====================================================${NC}\n"
 
 # ------------------------------------------------------------------------------
 # THE ULTIMATE PACKAGE LIST (CLI Based & Optimized for Nitro 5)
 # ------------------------------------------------------------------------------
 ESSENTIAL_TOOLS=(
-    "neovim"           # Neovim - The Ultimate System Toolkit for Nitro 5
-    "git"              # Version control system
-    "nodejs"           # JavaScript runtime (for Neovim plugins)
-    "npm"              # Node package manager (for Neovim plugins)
-    "python-pip"       # Python package installer (for Neovim plugins)
-    "python-pynvim"    # Python client for Neovim
-    "unzip"            # For extracting plugin files
-    "wget"            # For downloading plugins and tools
-    "curl"            # For fetching plugin data and updates
-    "tree-sitter"      # For enhanced syntax highlighting
-    "ripgrep"         # Fast searching within Neovim
-    "fd"               # Fast file searching (alternative to find)
-    "fd-find"         # Another version of fd for compatibility
-    "luarocks"        # Lua package manager (for Neovim plugins)
-    "fzf"             # Fuzzy finder for Neovim
+    "yazi"           # Yazi - The Ultimate System Toolkit for Nitro 5
+    "ffmpeg"         # Multimedia framework for audio/video processing
+    "7zip"           # High compression file archiver
+    "jq"             # Command-line JSON processor for configuration management
+    "poppler"        # PDF rendering library (for PDF manipulation and viewing)
+    "fd"             # Simple, fast and user-friendly alternative to 'find'
+    "ripgrep"        # Fast search tool for codebases and files
+    "fzf"            # Command-line fuzzy finder for efficient file searching
+    "zoxide"         # Smarter cd command with fuzzy matching
+    "resvg"          # High-quality SVG rendering library
+    "imagemagick"    # Image manipulation tool (for converting PDFs to images)
 )
 
 # ------------------------------------------------------------------------------
 # EXECUTE INSTALLATION
 # ------------------------------------------------------------------------------
-echo -e "${YELLOW}[1/2] Syncing databases and deploying Neovim ecosystem...${NC}"
+echo -e "${YELLOW}[1/2] Syncing databases and deploying YAZI ecosystem...${NC}"
 sudo pacman -Sy --needed "${ESSENTIAL_TOOLS[@]}"
 
 # ------------------------------------------------------------------------------
 # COPY CONFIGURATION FILES
 # ------------------------------------------------------------------------------
-echo -e "${YELLOW}[2/2] Copying Neovim configuration files...${NC}"
-mkdir -p "$HOME/.config/nvim"
-cp -r ".config/nvim/"* "$HOME/.config/nvim/"
+echo -e "${YELLOW}[2/2] Copying Yazi configuration files...${NC}"
+mkdir -p "$HOME/.config/yazi"
+cp -r ".config/yazi/"* "$HOME/.config/yazi/"
 
 # ------------------------------------------------------------------------------
 # COMPLETION

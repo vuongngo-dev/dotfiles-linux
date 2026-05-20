@@ -8,26 +8,6 @@ YELLOW='\033[1;33m'
 LAVENDER='\033[0;35m'
 NC='\033[0m'
 
-# --- DISPLAY LOGO ---
-show_logo() {
-    clear
-    echo -e "${LAVENDER}"
-    cat <<"EOF"
-  ================================================
-    _   ____  ______  _  _______  _  ___________ 
-   | | / / / / / __ \/ |/ / ___/ / |/ / ___/ __ \
-   | |/ / /_/ / /_/ /    / (_ / /    / (_ / /_/ /
-   |___/\____/\____/_/|_/\___/ /_/|_/\___/\____/ 
-  ================================================
-EOF
-    echo -e "${NC}"
-    echo -e "${BLUE}>>> Starting System Installation ...${NC}"
-    echo "------------------------------------------------"
-}
-
-# Call the function
-show_logo
-
 # ==============================================================================
 # TERMINAL COLOR CODES
 # ==============================================================================
@@ -78,8 +58,15 @@ echo -e "${YELLOW}[1/2] Removing conflicting portals (Hyprland/Wlroots)...${NC}"
 sudo pacman -Rns --noconfirm xdg-desktop-portal-hyprland xdg-desktop-portal-wlr 2>/dev/null || true
 
 # ------------------------------------------------------------------------------
+# COPY CONFIGURATION FILES
+# ------------------------------------------------------------------------------
+echo -e "${YELLOW}[2/2] Copying Niri configuration files...${NC}"
+mkdir -p "$HOME/.config/niri"
+cp -r "niri/.config/"* "$HOME/.config/niri/"
+
+# ------------------------------------------------------------------------------
 # 3. EXECUTE INSTALLATION
 # ------------------------------------------------------------------------------
 echo -e "\n${YELLOW}[2/2] Installing Niri ecosystem and Sway tools...${NC}"
-sudo pacman -Sy --needed --noconfirm "${NIRI_PACKAGES[@]}"
+sudo pacman -Sy --needed "${NIRI_PACKAGES[@]}"
 

@@ -7,26 +7,6 @@ YELLOW='\033[1;33m'
 LAVENDER='\033[0;35m'
 NC='\033[0m'
 
-# --- DISPLAY LOGO ---
-show_logo() {
-    clear
-    echo -e "${LAVENDER}"
-    cat << "EOF"
-  ================================================
-    _   ____  ______  _  _______  _  ___________ 
-   | | / / / / / __ \/ |/ / ___/ / |/ / ___/ __ \
-   | |/ / /_/ / /_/ /    / (_ / /    / (_ / /_/ /
-   |___/\____/\____/_/|_/\___/ /_/|_/\___/\____/ 
-  ================================================
-EOF
-    echo -e "${NC}"
-    echo -e "${BLUE}>>> Starting System Installation ...${NC}"
-    echo "------------------------------------------------"
-}
-
-# Call the function
-show_logo
-
 # ==============================================================================
 # TERMINAL COLOR CODES
 # ==============================================================================
@@ -52,7 +32,7 @@ KDE_MINIMAL=(
 # EXECUTE INSTALLATION
 # ------------------------------------------------------------------------------
 echo -e "${YELLOW}[1/3] Installing KDE core components...${NC}"
-sudo pacman -Sy --needed --noconfirm "${KDE_MINIMAL[@]}"
+sudo pacman -Sy --needed "${KDE_MINIMAL[@]}"
 
 echo -e "\n${YELLOW}[2/3] Enabling SDDM Service...${NC}"
 sudo systemctl enable sddm

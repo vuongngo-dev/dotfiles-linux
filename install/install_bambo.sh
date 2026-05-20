@@ -7,26 +7,6 @@ YELLOW='\033[1;33m'
 LAVENDER='\033[0;35m'
 NC='\033[0m'
 
-# --- DISPLAY LOGO ---
-show_logo() {
-    clear
-    echo -e "${LAVENDER}"
-    cat << "EOF"
-  ================================================
-    _   ____  ______  _  _______  _  ___________ 
-   | | / / / / / __ \/ |/ / ___/ / |/ / ___/ __ \
-   | |/ / /_/ / /_/ /    / (_ / /    / (_ / /_/ /
-   |___/\____/\____/_/|_/\___/ /_/|_/\___/\____/ 
-  ================================================
-EOF
-    echo -e "${NC}"
-    echo -e "${BLUE}>>> Starting System Installation ...${NC}"
-    echo "------------------------------------------------"
-}
-
-# Call the function
-show_logo
-
 # ==============================================================================
 # TERMINAL COLOR CODES
 # ==============================================================================
@@ -51,7 +31,7 @@ FCITX5_PACKAGES=(
 # ------------------------------------------------------------------------------
 echo -e "${YELLOW}[1/2] Syncing databases and installing Fcitx5 ecosystem...${NC}"
 # All packages are available in the official Arch repositories
-sudo pacman -Sy --needed --noconfirm "${FCITX5_PACKAGES[@]}"
+sudo pacman -Sy --needed "${FCITX5_PACKAGES[@]}"
 
 # ------------------------------------------------------------------------------
 # COMPLETION

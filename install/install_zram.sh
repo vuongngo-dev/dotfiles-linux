@@ -8,35 +8,14 @@ LAVENDER='\033[0;35m'
 CYAN='\033[0;36m'
 NC='\033[0m'
 
-# --- DISPLAY LOGO ---
-show_logo() {
-    clear
-    echo -e "${LAVENDER}"
-    cat << "EOF"
-  ================================================
-    _   ____  ______  _  _______  _  ___________ 
-   | | / / / / / __ \/ |/ / ___/ / |/ / ___/ __ \
-   | |/ / /_/ / /_/ /    / (_ / /    / (_ / /_/ /
-   |___/\____/\____/_/|_/\___/ /_/|_/\___/\____/ 
-  ================================================
-EOF
-    echo -e "${NC}"
-    echo -e "${BLUE}>>> Starting System Installation ...${NC}"
-    echo "------------------------------------------------"
-}
-
-# Call the function
-show_logo
-
 # --- COLOR CODES ---
-
 echo -e "${BLUE}====================================================${NC}"
 echo -e "${GREEN}   ZRAM AUTO-INSTALLATION & OPTIMIZATION (ARCH) ${NC}"
 echo -e "${BLUE}====================================================${NC}\n"
 
 # 1. Install core package
 echo -e "${YELLOW}[1/5] Downloading zram-generator from pacman repository...${NC}"
-sudo pacman -S --noconfirm --needed zram-generator
+sudo pacman -S --needed zram-generator
 
 # 2. Write optimized configuration to the system
 echo -e "${YELLOW}[2/5] Creating config: Allocating 50% RAM, using zstd compression algorithm...${NC}"
