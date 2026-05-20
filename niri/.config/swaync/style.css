@@ -35,7 +35,7 @@
 
 /* --- COMMON WIDGET STYLES --- */
 .widget-title, .widget-dnd, .widget-volume, 
-.widget-backlight, .widget-menubar, .widget-buttons-grid {
+.widget-backlight, .widget-buttons-grid {
   background: @mantle;
   border-radius: 5px;
   margin-bottom: 5px 10px;
@@ -95,19 +95,6 @@ scale slider {
 .widget-buttons-grid > flowbox > flowboxchild > button:checked {
   background: @lavender;
   color: @base; /* Chữ/Icon chuyển sang màu tối trên nền sáng */
-}
-
-/* --- MENUBAR (POWER PROFILES) --- */
-.widget-menubar > menubar > menuitem {
-  background: @surface0;
-  align-items: center;
-  border-radius: 8px;
-  padding: 20px;
-  margin: 5px;
-}
-.widget-menubar > menubar > menuitem:hover {
-  background: @lavender;
-  color: @base;
 }
 
 /* --- NOTIFICATIONS --- */

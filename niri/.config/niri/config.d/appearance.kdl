@@ -5,20 +5,20 @@
 //  |___/\____/\____/_/|_/\___/ /_/|_/\___/\____/ 
 // ================================================
 
-//=====================================
+// =====================================
 // Layout
-//=====================================
+// =====================================
 // https://github.com/niri-wm/niri/wiki/Overview
 
 overview {
-    zoom 0.4
+    zoom 0.5
     backdrop-color "#131329"
     workspace-shadow { off; }
 }
 
-//=====================================
+// =====================================
 // Layout
-//=====================================
+// =====================================
 // https://niri-wm.github.io/niri/Configuration%3A-Layout.html
 
 layout {
@@ -48,11 +48,18 @@ layout {
     // off all effects
     shadow { off; }
     border { off; }
-    focus-ring { off; }
+
+    focus-ring {
+        on
+        width 2
+        active-color "#ffffff77"
+        inactive-color "#505050"
+        urgent-color "#9b0000"
+    }
 
     insert-hint {
         on
-        color "#ffffff1c"
+        color "#ffffff49"
     }
     
     struts {
@@ -63,9 +70,9 @@ layout {
     }
 }
 
-//=====================================
+// =====================================
 // WINDOW TAB STYLE
-//=====================================
+// =====================================
 // https://niri-wm.github.io/niri/Configuration%3A-Recent-Windows.html
 recent-windows {
     debounce-ms 350
@@ -89,14 +96,15 @@ recent-windows {
     }
 } 
 
-//=====================================
+// =====================================
 // WINDOW RULES
-//=====================================
+// =====================================
 // https://niri-wm.github.io/niri/Configuration%3A-Window-Rules.html
 
 window-rule {
     geometry-corner-radius 0
     clip-to-geometry true
+    draw-border-with-background false
     shadow { off; }
 }
 
@@ -196,9 +204,9 @@ window-rule {
     }
 }
 
-//=====================================
+// =====================================
 // LAYER RULES
-//=====================================
+// =====================================
 // https://niri-wm.github.io/niri/Configuration%3A-Layer-Rules.html
 
 layer-rule {

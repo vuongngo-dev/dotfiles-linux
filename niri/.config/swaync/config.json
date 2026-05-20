@@ -3,9 +3,9 @@
   "positionX": "right",
   "positionY": "top",
   "control-center-width": 300,
-  "control-center-margin-top": 20,
+  "control-center-margin-top": 300,
   "control-center-margin-right": 20,
-  "control-center-margin-bottom": 100,
+  "control-center-margin-bottom": 20,
   "notification-window-width": 300,
   "notification-icon-size": 48,
   "transition-length": 150,
@@ -18,7 +18,6 @@
     "volume",
     "backlight",
     "buttons-grid",
-    "menubar#power",
     "dnd",
     "notifications"
   ],
@@ -62,35 +61,6 @@
           "interval": 10
         }
       ]
-    },
-    "menubar#power": {
-      "menu#profile": {
-        "label": "󰓅   Power Profiles Daemon",
-        "position": "right",
-        "actions": [
-          {
-            "label": "󰓅  Performance",
-            "type": "toggle",
-            "command": "~/.config/niri/scripts/power_mode.sh performance",
-            "update-command": "powerprofilesctl get | grep -q performance && echo true || echo false",
-            "interval": 10
-          },
-          {
-            "label": "󰾆  Balanced",
-            "type": "toggle",
-            "command": "~/.config/niri/scripts/power_mode.sh balanced",
-            "update-command": "powerprofilesctl get | grep -q balanced && echo true || echo false",
-            "interval": 10
-          },
-          {
-            "label": "󰌪  Power Saver",
-            "type": "toggle",
-            "command": "~/.config/niri/scripts/power_mode.sh power-saver",
-            "update-command": "powerprofilesctl get | grep -q power-saver && echo true || echo false",
-          "interval": 10
-          }
-        ]
-      }
     }
   }
 }
