@@ -1,8 +1,6 @@
 -- ~/.config/yazi/init.lua
 
-require("starship"):setup()
-require("simple-status"):setup()
---require("yatline-created-time"):setup()
+require("yatline-created-time"):setup()
 
 function Linemode:size_and_mtime()
 local time = math.floor(self._file.cha.mtime or 0)
@@ -133,63 +131,14 @@ theme = my_theme,
 
 -- Uncomment the topic you like for further use
 
--- ############################################################
--- "yatline-dracula"
-
---local dracula_theme = require("yatline-dracula"):setup()
---require("yatline"):setup({
-	-- ===
-
---	theme = dracula_theme,
-
-	-- ===
---})
-
--- #############################################################
--- yatline-catppuccin
-
-local catppuccin_theme = require("yatline-catppuccin"):setup("macchiato") -- or "latte" | "frappe" | "macchiato" | "mocha"
-require("yatline"):setup({
-	-- ===
-
-	theme = catppuccin_theme,
-
-	-- ===
-})
-
 -- #############################################################
 -- yatline-tokyo-night
 
---local tokyo_night_theme = require("yatline-tokyo-night"):setup("night") -- or moon/storm/day
---require("yatline"):setup({
+local tokyo_night_theme = require("yatline-tokyo-night"):setup("night") -- or moon/storm/day
+require("yatline"):setup({
 	-- ===
 
---	theme = tokyo_night_theme,
+	theme = tokyo_night_theme,
 
 	-- ===
---})
-
--- #############################################################
--- yatline-gruvbox
-
---local gruvbox_theme = require("yatline-gruvbox"):setup("dark") -- or "light"
---require("yatline"):setup({
-	-- ===
-
---	theme = gruvbox_theme,
-
-	-- ===
---})
-
--- #############################################################
--- yatline-gruvbox-material
-
---local gruvbox_material_theme = require("yatline-gruvbox-material"):setup({ mode = "dark", toughness = "medium" }) -- or "light" -- or "hard" | "soft"
---require("yatline"):setup({
-	-- ===
-
---	theme = gruvbox_material_theme,
-
-	-- ===
---})
-
+})
