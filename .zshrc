@@ -94,6 +94,37 @@ fi
 # Compilation flags
 export ARCHFLAGS="-arch $(uname -m)"
 
+# Move char while hole "ALT"
+bindkey '^[[1;3D' backward-char
+bindkey '^[h' backward-char
+
+bindkey '^[[1;3C' forward-char
+bindkey '^[l' forward-char
+
+bindkey '^[[1;3A' up-line-or-history
+bindkey '^[k' up-line-or-history
+
+bindkey '^[[1;3B' down-line-or-history
+bindkey '^[j' down-line-or-history
+
+
+bindkey '^[[H' beginning-of-line
+bindkey '^[[F' end-of-line
+function zle-keymap-select() {
+  if [[ $KEYMAP == vicmd ]]; then
+    echo -ne "\e[2m"
+  else
+    echo -ne "\e[5m"
+  fi
+}
+zle -N zle-keymap-select
+
+echo -ne "\e[5m"
+
+# Setup environment
+# Pyenv (manage python version)
+# Java (manage java version)
+
 # Set personal aliases, overriding those provided by Oh My Zsh libs,
 # plugins, and themes. Aliases can be placed here, though Oh My Zsh
 # users are encouraged to define aliases within a top-level file in
@@ -101,7 +132,6 @@ export ARCHFLAGS="-arch $(uname -m)"
 # - $ZSH_CUSTOM/aliases.zsh
 # - $ZSH_CUSTOM/macos.zsh
 # For a full list of active aliases, run `alias`.
-#
 # Example aliases
 alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
