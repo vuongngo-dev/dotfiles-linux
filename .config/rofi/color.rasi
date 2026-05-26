@@ -16,3 +16,16 @@
     separator-color:  #313244FF; /* surface0: subtle line for clean organization */
     background-color: transparent;
 }
+
+/* Custom keybind like vim */
+configuration {
+    kb-row-up: "Up,Alt+k,Shift+Tab,Shift+ISO_Left_Tab";
+    kb-row-down: "Down,Alt+j";
+
+    kb-accept-entry: "Control+y,Return,KP_Enter";
+    terminal: "mate-terminal";
+    kb-remove-to-eol: "Control+Shift+e";
+    /*kb-mode-next: "Shift+Right,Control+Tab,Control+l";*/
+    kb-mode-previous: "Shift+Left,Control+Shift+Tab,Alt+h";
+    kb-remove-char-back: "BackSpace";
+}
