@@ -3,52 +3,50 @@
 require("yatline-created-time"):setup()
 
 function Linemode:size_and_mtime()
-local time = math.floor(self._file.cha.mtime or 0)
-if time == 0 then
-	time = ""
+	local time = math.floor(self._file.cha.mtime or 0)
+	if time == 0 then
+		time = ""
 	elseif os.date("%Y", time) == os.date("%Y") then
 		time = os.date("%b %d %H:%M", time)
-		else
-			time = os.date("%b %d  %Y", time)
-			end
+	else
+		time = os.date("%b %d  %Y", time)
+	end
 
-			local size = self._file:size()
-			return string.format("%s %s", size and ya.readable_size(size) or "-", time)
+	local size = self._file:size()
+	return string.format("%s %s", size and ya.readable_size(size) or "-", time)
+end
 
-			end
-
-require("full-border"):setup {
+require("full-border"):setup({
 	-- Available values: ui.Border.PLAIN, ui.Border.ROUNDED
 	type = ui.Border.ROUNDED,
-}
+})
 
 -- require("full-border"):setup()
 
-require("smart-enter"):setup {
+require("smart-enter"):setup({
 	open_multi = true,
-}
-
+})
 
 -- https://github.com/imsi32/yatline.yazi/wiki
 
 require("yatline"):setup({
-theme = my_theme,
---  Default
---	section_separator = { open = "", close = "" },
---	part_separator = { open = "", close = "" },
---	inverse_separator = { open = "", close = "" },
-
-	section_separator = { open = "", close = "" },
-	part_separator = { open = "", close = "" },
+	theme = my_theme,
+	--  Default
+	section_separator = { open = "", close = "" },
+	part_separator = { open = "", close = "" },
 	inverse_separator = { open = "", close = "" },
+
+	-- section_separator = { open = "", close = "" },
+	-- part_separator = { open = "", close = "" },
+	-- inverse_separator = { open = "", close = "" },
 
 	style_a = {
 		fg = "black",
 		bg_mode = {
-		normal = "white",
-		select = "brightyellow",
-		un_set = "brightred"
-		}
+			normal = "white",
+			select = "brightyellow",
+			un_set = "brightred",
+		},
 	},
 	style_b = { bg = "brightblack", fg = "brightwhite" },
 	style_c = { bg = "black", fg = "brightwhite" },
@@ -82,50 +80,47 @@ theme = my_theme,
 	header_line = {
 		left = {
 			section_a = {
-				{type = "line", custom = false, name = "tabs", params = {"left"}},
+				{ type = "line", custom = false, name = "tabs", params = { "left" } },
 			},
-			section_b = {
-			},
-			section_c = {
-			}
+			section_b = {},
+			section_c = {},
 		},
 		right = {
 			section_a = {
-				{type = "string", custom = false, name = "date", params = {"%A, %d %B %Y"}},
+				{ type = "string", custom = false, name = "date", params = { "%A, %d %B %Y" } },
 			},
 			section_b = {
-				{type = "string", custom = false, name = "date", params = {"%X"}},
+				{ type = "string", custom = false, name = "date", params = { "%X" } },
 			},
-			section_c = {
-			}
-		}
+			section_c = {},
+		},
 	},
 
 	status_line = {
 		left = {
 			section_a = {
-				{type = "string", custom = false, name = "tab_mode"},
+				{ type = "string", custom = false, name = "tab_mode" },
 			},
 			section_b = {
-				{type = "string", custom = false, name = "hovered_size"},
+				{ type = "string", custom = false, name = "hovered_size" },
 			},
 			section_c = {
-				{type = "string", custom = false, name = "hovered_path"},
-				{type = "coloreds", custom = false, name = "count"},
-			}
+				{ type = "string", custom = false, name = "hovered_path" },
+				{ type = "coloreds", custom = false, name = "count" },
+			},
 		},
 		right = {
 			section_a = {
-				{type = "string", custom = false, name = "cursor_position"},
+				{ type = "string", custom = false, name = "cursor_position" },
 			},
 			section_b = {
-				{type = "string", custom = false, name = "cursor_percentage"},
+				{ type = "string", custom = false, name = "cursor_percentage" },
 			},
 			section_c = {
-				{type = "string", custom = false, name = "hovered_file_extension", params = {true}},
-				{type = "coloreds", custom = false, name = "permissions"},
-			}
-		}
+				{ type = "string", custom = false, name = "hovered_file_extension", params = { true } },
+				{ type = "coloreds", custom = false, name = "permissions" },
+			},
+		},
 	},
 })
 
@@ -137,8 +132,6 @@ theme = my_theme,
 local tokyo_night_theme = require("yatline-tokyo-night"):setup("night") -- or moon/storm/day
 require("yatline"):setup({
 	-- ===
-
 	theme = tokyo_night_theme,
-
 	-- ===
 })

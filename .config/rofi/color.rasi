@@ -17,7 +17,7 @@
     background-color: transparent;
 }
 
-/* Custom keybind like vim */
+
 configuration {
     kb-row-up: "Up,Alt+k,Shift+Tab,Shift+ISO_Left_Tab";
     kb-row-down: "Down,Alt+j";

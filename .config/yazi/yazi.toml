@@ -27,7 +27,7 @@ show_hidden = true
 # you may need to increase the memory limit if no image is rendered.
 # https://yazi-rs.github.io/docs/configuration/yazi#tasks
 [tasks]
-  image_alloc      = 1073741824        # = 1024*1024*1024 = 1024MB
+image_alloc = 1073741824        # = 1024*1024*1024 = 1024MB
 
 
 [spot]
@@ -41,6 +41,9 @@ tbl_col = { fg = "blue" }
 
 # Or, use rules to rewrite the entire default rules:
 [opener]
+open_command = [
+    { run = 'open_command "$@"', orphan = true, desc = "System Default" }
+]
 edit = [
   { run = 'nvim "$@"', block = true },
 ]
