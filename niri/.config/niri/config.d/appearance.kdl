@@ -75,6 +75,7 @@ layout {
 // =====================================
 // https://niri-wm.github.io/niri/Configuration%3A-Recent-Windows.html
 recent-windows {
+    off
     debounce-ms 350
     open-delay-ms 150
 
@@ -94,7 +95,7 @@ recent-windows {
         Alt+Tab { next-window; }
         Alt+Shift+Tab { previous-window; }
     }
-} 
+}
 
 // =====================================
 // WINDOW RULES
