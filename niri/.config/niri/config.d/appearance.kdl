@@ -28,19 +28,15 @@ layout {
     
     // default windows
     preset-column-widths {
-        proportion 0.33333
         proportion 0.5
-        proportion 0.66667
         proportion 1.0 // Monitor configuration.
     }
     preset-window-heights {
-        proportion 0.33333
         proportion 0.5
-        proportion 0.66667
         proportion 1.0
     }
     default-column-width {
-        proportion 0.5;
+        proportion 1.0;
     }
 
     // appearence
@@ -48,14 +44,7 @@ layout {
     // off all effects
     shadow { off; }
     border { off; }
-
-    focus-ring {
-        on
-        width 2
-        active-color "#ffffff77"
-        inactive-color "#505050"
-        urgent-color "#9b0000"
-    }
+    focus-ring { off; }
 
     insert-hint {
         on
@@ -157,7 +146,6 @@ window-rule {
     match app-id=r#"org\.gtk\.FileChooserDialog"#
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
     
-    
     open-floating true
     default-column-width { proportion 0.6; }
     default-window-height { proportion 0.6; }
@@ -212,7 +200,6 @@ window-rule {
 
 layer-rule {
     match namespace="^notifications$"
-
     block-out-from "screencast"
 }
 

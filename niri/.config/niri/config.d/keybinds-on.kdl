@@ -15,7 +15,7 @@ binds {
     Mod+Return { spawn "foot"; }
     Mod+E { spawn "nautilus"; }
     Mod+A { spawn "rofi" "-show" "drun" "-theme" "~/.config/rofi/config.rasi"; }
-    Mod+Shift+A { spawn "~/.config/niri/scripts/rofi-nvidia.sh"; }
+    Mod+Shift+A { spawn "~/.config/niri/scripts/rofi_nvidia.sh"; }
     Mod+N { spawn "swaync-client" "-t" "-sw"; }
     Mod+Ctrl+Alt+L { spawn "hyprlock"; }
 
@@ -31,7 +31,7 @@ binds {
     Mod+W { toggle-window-floating; }
     Mod+D { toggle-column-tabbed-display; }
     Mod+Shift+W { switch-focus-between-floating-and-tiling; }
-    Mod+O { maximize-column; }
+    Mod+O { switch-preset-column-width; }
     Mod+F11 { fullscreen-window; }
     Mod+Tab { toggle-overview; }
     Mod+Shift+Slash { show-hotkey-overlay; }
@@ -148,7 +148,6 @@ binds {
     // Size
     Mod+Ctrl+F { expand-column-to-available-width; }
     Mod+Alt+F  { toggle-windowed-fullscreen; }
-    Mod+R      { switch-preset-column-width; }
     Mod+Shift+R { switch-preset-window-height; }
     Mod+Ctrl+R { reset-window-height; }
     Mod+C      { center-column; }

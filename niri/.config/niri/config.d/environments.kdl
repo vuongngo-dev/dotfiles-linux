@@ -23,6 +23,7 @@ environment {
     // --- TOOLKIT BACKENDS ---
     // Force applications to use Wayland natively
     QT_QPA_PLATFORM "wayland;xcb"
+    QT_QPA_PLATFORMTHEME "qt6ct"
     GDK_BACKEND "wayland,x11"
     CLUTTER_BACKEND "wayland"
     SDL_VIDEODRIVER "wayland,x11"
