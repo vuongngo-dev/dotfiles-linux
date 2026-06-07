@@ -21,6 +21,8 @@ echo -e "${BLUE}====================================================${NC}\n"
 ESSENTIAL_TOOLS=(
     "yazi"           # Yazi - The Ultimate System Toolkit for Nitro 5
     "ffmpeg"         # Multimedia framework for audio/video processing
+    "ffmpegthumbnailer"
+    "python-pillow"
     "7zip"           # High compression file archiver
     "jq"             # Command-line JSON processor for configuration management
     "poppler"        # PDF rendering library (for PDF manipulation and viewing)

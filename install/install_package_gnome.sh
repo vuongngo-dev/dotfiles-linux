@@ -44,10 +44,12 @@ ESSENTIAL_TOOLS=(
   # 4. Desktop UI & Theme Engine
   "nwg-look"                  # Core GTK Theme/Icon/Cursor manager
   "gsettings-desktop-schemas" # Essential for GNOME app settings
+  "xdg-desktop-portal-gnome"
 
   # 5. Developer & Maintenance
   "neovim"         # Your primary coding environment
   "pacman-contrib" # System clean-up tools (paccache)
+  "xclip"
 )
 
 # ------------------------------------------------------------------------------
