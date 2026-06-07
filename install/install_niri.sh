@@ -44,7 +44,6 @@ NIRI_PACKAGES=(
     "wl-clipboard" "cliphist" # Clipboard manager & history
     "brightnessctl"           # CLI for display brightness
     "pavucontrol"             # GUI for volume management
-    "network-manager-applet"  # Tray icon for WiFi
     "blueman"                 # Tray icon for Bluetooth
     "libnotify"               # Desktop notifications library
     "wlsunset"                # Blue light filter

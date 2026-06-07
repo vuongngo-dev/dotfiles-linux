@@ -31,13 +31,14 @@ ESSENTIAL_TOOLS=(
   "gnome-text-editor"    # Modern "Notepad" (Libadwaita)
   "gnome-calculator"     # Feature-rich calculator
   "gnome-font-viewer"    # Preview and install fonts
-  "gnome-calendar"       # Event management
+  # "gnome-calendar"       # Event management
   "gnome-clocks"         # Alarm, Timer, Stopwatch
   "loupe"                # Modern, fast image viewer
-  "decibels"             # Minimalist music player (Replaces Elisa)
+  # "decibels"             # Minimalist music player (Replaces Elisa)
   "gnome-sound-recorder" # GNOME audio recorder (Replaces KRecorder)
-  "showtime"             # Best video player for Hyprland
-  "snapshot"		         # Camera
+  # "showtime"             # Best video player for Hyprland
+  "mpv"                  # Look video & audio in terminal 
+  "snapshot"             # Camera
 
 
   # 4. Desktop UI & Theme Engine
